@@ -151,3 +151,57 @@ let _ = 2; // and now a variable with the name "_"
 alert($ + _); // 3
 ```
 
+**Constants in JS**
+
+- To declare a constant (unchanging) variable, use ```const``` instead of ```let```:
+
+Input:
+```
+const myBirthday = '04.05.1999';
+alert(myBirthday);
+```
+Output:
+```
+04.05.1999
+```
+
+- Variables declared using ```const``` are called "constants". They cannot be changed. An attempt to do so would cause an error:
+
+Input:
+```
+const myBirthday = '04.05.1999';
+myBirthday = '01.01.2001'; // error, can't reassign the constant!
+```
+Output:
+```
+TypeError: Assignment to constant variable.
+```
+
+**Uppercase constants**
+
+There is a widespread practice to use constants as aliases for difficult-to-remember values that are known prior to execution. Such constants are named using capital letters and underscores.
+
+For instance, let's make constants for colors in so-called web “hex” format:
+
+Example:
+```
+const COLOR_RED = "#F00";
+const COLOR_GREEN = "#0F0";
+const COLOR_BLUE = "#00F";
+const COLOR_ORANGE = "#FF7F00";
+
+// ...when we need to pick a color
+let color = COLOR_ORANGE;
+alert(color); // #FF7F00
+```
+
+Benefits:
+
+- ```COLOR_ORANGE``` is much easier to remember than ```#FF7F00```.
+- It is much easier to mistype ```#FF7F00``` than ```COLOR_ORANGE```.
+- When reading the code, ```COLOR_ORANGE``` is much more meaningful than ```#FF7F00```.
+
+Name Things Right:
+
+- A variable name should have a clean, obvious meaning, describing the data it stores.
+- Variable naming is one of the most important and complex skills in programming. A quick glance at variable names can reveal which code was written by a beginner versus an experienced developer.
