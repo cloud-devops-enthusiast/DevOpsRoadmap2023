@@ -135,3 +135,19 @@ Output:
 Hello World
 Hello World
 ```
+
+- **Variable Naming in JS**
+
+- There are two limitations on variable names in JavaScript:
+
+1. The name must contain only letters, digits, or the symbols ```$``` and ```_```.
+
+2. The first character must not be a digit.
+
+Example:
+```
+let $ = 1; // declared a variable with the name "$"
+let _ = 2; // and now a variable with the name "_"
+alert($ + _); // 3
+```
+
