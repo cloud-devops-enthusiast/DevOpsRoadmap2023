@@ -205,3 +205,110 @@ Name Things Right:
 
 - A variable name should have a clean, obvious meaning, describing the data it stores.
 - Variable naming is one of the most important and complex skills in programming. A quick glance at variable names can reveal which code was written by a beginner versus an experienced developer.
+
+- **Practise:**
+- *Working with variables:*
+
+1.  Declare two variables: admin and name.
+
+2. Assign the value "John" to name.
+
+3. Copy the value from name to admin.
+
+4. Show the value of admin using alert (must output “John”).
+
+Input:
+```
+<!DOCTYPE HTML>
+<html>
+<body>
+  <p>Before the script...</p>
+  <script>
+   let  name = "John";
+   let admin = name;
+   alert("name: "+name);
+  </script>  
+  <p>...After the script.</p>
+</body>
+</html>
+```
+
+Output:
+```
+name: John
+```
+
+- *Giving the right name:*
+
+1. Create a variable with the name of our planet. How would you name such a variable?
+
+2. Create a variable to store the name of a current visitor to a website. How would you name that variable?
+
+Input:
+```
+<!DOCTYPE HTML>
+<html>
+<body>
+  <p>Before the script...</p>
+  <script>
+   var our_planet;
+   our_planet = "Earth";
+   var current_user;
+   current_user = "John";
+   alert("Our Planet is "+ our_planet +" and current user on our website is "+ current_user +"");
+  </script>  
+  <p>...After the script.</p>
+</body>
+</html>
+```
+
+Output:
+```
+Our Planet is Earth and current user on our website is John
+```
+
+- *Uppercase constants:*
+
+Input:
+```
+<!DOCTYPE HTML>
+<html>
+<body>
+  <p>Before the script...</p>
+  <script>
+   const BIRTHDAY = '04.05.1999'; // make uppercase?
+   alert("My birthday is " + BIRTHDAY);
+  </script>  
+  <p>...After the script.</p>
+</body>
+</html>
+```
+
+Output:
+```
+My birthday is 04.05.1999
+```
+
+- **Data Types in JS**
+
+- *Number*:
+
+- The number type represents both integer and floating point numbers. There are many operations for number values:
+
+*Infinity* represents the mathematical infinity ∞. It is a special value that’s greater than any number.
+
+```
+alert( 1 / 0 ); // Infinity
+```
+
+*NaN* represents a computational error. It is a result of an incorrect or an undefined mathematical operation, for instance:
+
+```
+alert( "not a number" / 2 ); // NaN, such division is erroneous
+```
+
+*NaN* is sticky. Any further operation on *NaN* returns *NaN*:
+
+```
+alert( "not a number" / 2 + 5 ); // NaN
+```
