@@ -1,0 +1,1 @@
+This folder consists of programs for the Java Fundamentals. The programs are divided into different folders based on the topics. The programs are written here are based on java 8.
