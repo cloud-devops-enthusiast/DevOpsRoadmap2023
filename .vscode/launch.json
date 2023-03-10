@@ -4,6 +4,7 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
         {
             "type": "java",
             "name": "Demo",
@@ -13,9 +14,44 @@
         },
         {
             "type": "java",
-            "name": "HelloWorld",
+            "name": "helloWorld",
             "request": "launch",
-            "mainClass": "HelloWorld",
+            "mainClass": "helloWorld",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
+            "name": "addition",
+            "request": "launch",
+            "mainClass": "addition",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
+            "name": "widening",
+            "request": "launch",
+            "mainClass": "widening",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
+            "name": "narrowing",
+            "request": "launch",
+            "mainClass": "narrowing",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
+            "name": "overflow",
+            "request": "launch",
+            "mainClass": "overflow",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
+            "name": "addingLowerType",
+            "request": "launch",
+            "mainClass": "addingLowerType",
             "projectName": "DevOpsRoadmap2023_3ce44e12"
         }
     ]
