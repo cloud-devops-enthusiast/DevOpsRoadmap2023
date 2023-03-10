@@ -1,4 +1,5 @@
 public class widening {
+    // Widening is the process of converting a value of a smaller data type to a larger data type.
     public static void main(String[] args){
         int a = 10;
         float b = a;
