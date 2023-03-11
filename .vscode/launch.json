@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "nestedifStatement2",
+            "request": "launch",
+            "mainClass": "nestedifStatement2",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
+            "name": "nestedIfStatement",
+            "request": "launch",
+            "mainClass": "nestedIfStatement",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
+            "name": "positiveNegative",
+            "request": "launch",
+            "mainClass": "positiveNegative",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
+            "name": "ifelseifStatement",
+            "request": "launch",
+            "mainClass": "ifelseifStatement",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
+            "name": "ternaryOperator",
+            "request": "launch",
+            "mainClass": "ternaryOperator",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
             "name": "leapyearIfElse",
             "request": "launch",
             "mainClass": "leapyearIfElse",
