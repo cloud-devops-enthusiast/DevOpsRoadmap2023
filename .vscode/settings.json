@@ -1,9 +1,10 @@
 {
     "java.project.sourcePaths": [
+        "Programming Language/Java/Step1. Java Fundamentals/Programs/Functions",
         "Programming Language/Java/Step1. Java Fundamentals/Programs/Data Types and Variables",
         "Programming Language/Java/Step1. Java Fundamentals/Programs/Conditionals",
         "Programming Language/Java/Step1. Java Fundamentals/Programs/Basic Syntax",
-        "Programming Language/Java/Step1. Java Fundamentals/Programs/Functions"
+        "Programming Language/Java/Step1. Java Fundamentals/Programs/Loops"
     ],
     "java.debug.settings.onBuildFailureProceed": true
 }
