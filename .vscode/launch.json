@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "instanceMethod",
+            "request": "launch",
+            "mainClass": "instanceMethod",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
+            "name": "staticMethod",
+            "request": "launch",
+            "mainClass": "staticMethod",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
+            "name": "additionMethod",
+            "request": "launch",
+            "mainClass": "additionMethod",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
+            "name": "evenOdd",
+            "request": "launch",
+            "mainClass": "evenOdd",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
             "name": "predefinedMethod",
             "request": "launch",
             "mainClass": "predefinedMethod",
