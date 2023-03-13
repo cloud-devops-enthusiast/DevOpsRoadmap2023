@@ -4,5 +4,6 @@
         "Programming Language/Java/Step1. Java Fundamentals/Programs/Conditionals",
         "Programming Language/Java/Step1. Java Fundamentals/Programs/Basic Syntax",
         "Programming Language/Java/Step1. Java Fundamentals/Programs/Functions"
-    ]
+    ],
+    "java.debug.settings.onBuildFailureProceed": true
 }
