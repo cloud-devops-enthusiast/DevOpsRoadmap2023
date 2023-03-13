@@ -6,6 +6,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "simpleForLoop",
+            "request": "launch",
+            "mainClass": "simpleForLoop",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
+            "name": "checkAge",
+            "request": "launch",
+            "mainClass": "checkAge",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
+            "name": "myMethod",
+            "request": "launch",
+            "mainClass": "myMethod",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
+            "name": "abstractMethod",
+            "request": "launch",
+            "mainClass": "abstractMethod",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
+            "name": "test",
+            "request": "launch",
+            "mainClass": "test",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
+            "name": "AccessAndMutatorMethod",
+            "request": "launch",
+            "mainClass": "AccessAndMutatorMethod",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
             "name": "instanceMethod",
             "request": "launch",
             "mainClass": "instanceMethod",
