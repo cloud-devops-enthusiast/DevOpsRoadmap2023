@@ -6,6 +6,62 @@
     "configurations": [
         {
             "type": "java",
+            "name": "simpleWhileLoop",
+            "request": "launch",
+            "mainClass": "simpleWhileLoop",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
+            "name": "forInfinitiveLoop",
+            "request": "launch",
+            "mainClass": "forInfinitiveLoop",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
+            "name": "labeledForExample2",
+            "request": "launch",
+            "mainClass": "labeledForExample2",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
+            "name": "labeledForExample",
+            "request": "launch",
+            "mainClass": "labeledForExample",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
+            "name": "forEachLoop",
+            "request": "launch",
+            "mainClass": "forEachLoop",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
+            "name": "pyramidExample2",
+            "request": "launch",
+            "mainClass": "pyramidExample2",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
+            "name": "pyramidExample",
+            "request": "launch",
+            "mainClass": "pyramidExample",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
+            "name": "nestedForLoop",
+            "request": "launch",
+            "mainClass": "nestedForLoop",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
             "name": "simpleForLoop",
             "request": "launch",
             "mainClass": "simpleForLoop",
