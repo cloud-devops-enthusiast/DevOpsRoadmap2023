@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "traverseArray",
+            "request": "launch",
+            "mainClass": "Array.traverseArray",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
+            "name": "multiDimensionalArray",
+            "request": "launch",
+            "mainClass": "Array.multiDimensionalArray",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
             "name": "searchingInArray",
             "request": "launch",
             "mainClass": "Array.searchingInArray",
