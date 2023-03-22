@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "searchingInArray",
+            "request": "launch",
+            "mainClass": "Array.searchingInArray",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
+            "name": "accessArray",
+            "request": "launch",
+            "mainClass": "Array.accessArray",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
+            "name": "insertionArray",
+            "request": "launch",
+            "mainClass": "insertionArray",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
             "name": "infinitiveDoWhileLoop",
             "request": "launch",
             "mainClass": "infinitiveDoWhileLoop",
