@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "linkedListQueue",
+            "request": "launch",
+            "mainClass": "Queue.linkedListQueue",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
             "name": "linkedList",
             "request": "launch",
             "mainClass": "Queue.linkedList",
