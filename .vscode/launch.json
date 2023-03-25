@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "linkedList",
+            "request": "launch",
+            "mainClass": "Queue.linkedList",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
+            "name": "priorityQueue",
+            "request": "launch",
+            "mainClass": "Queue.priorityQueue",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
+            "name": "iteratingQueue",
+            "request": "launch",
+            "mainClass": "Queue.iteratingQueue",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
+            "name": "removingQueue",
+            "request": "launch",
+            "mainClass": "Queue.removingQueue",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
             "name": "queueInterface",
             "request": "launch",
             "mainClass": "Queue.queueInterface",
