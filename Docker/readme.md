@@ -1,0 +1,1 @@
+This particular project is based on the [Docker](https://www.docker.com/) project. It is a set of tools and services that allow you to build, ship and run distributed applications. Docker is a great tool for building.
