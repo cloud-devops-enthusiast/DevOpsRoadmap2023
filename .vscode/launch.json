@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "hashInitialCapacity",
+            "request": "launch",
+            "mainClass": "hashInitialCapacity",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
+            "name": "hashConstructors",
+            "request": "launch",
+            "mainClass": "hashConstructors",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
+            "name": "hashExample",
+            "request": "launch",
+            "mainClass": "hashExample",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
             "name": "arrayImplementationQueue",
             "request": "launch",
             "mainClass": "Queue.arrayImplementationQueue",
