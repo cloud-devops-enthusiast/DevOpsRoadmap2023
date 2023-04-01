@@ -6,6 +6,55 @@
     "configurations": [
         {
             "type": "java",
+            "name": "traversalHashTable",
+            "request": "launch",
+            "mainClass": "traversalHashTable",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
+            "name": "removingElementHashtable",
+            "request": "launch",
+            "mainClass": "removingElementHashtable",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
+            "name": "changingElements",
+            "request": "launch",
+            "mainClass": "changingElements",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
+            "name": "addElementToHash",
+            "request": "launch",
+            "mainClass": "addElementToHash",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
+            "name": "hash001",
+            "request": "launch",
+            "mainClass": "hash001",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
+            "name": "addelementhashtable",
+            "request": "launch",
+            "mainClass": "addelementhashtable",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
+            "name": "hashFillTable",
+            "request": "launch",
+            "mainClass": "hashFillTable",
+            "projectName": "DevOpsRoadmap2023_3ce44e12"
+        },
+        {
+            "type": "java",
             "name": "hashInitialCapacity",
             "request": "launch",
             "mainClass": "hashInitialCapacity",
