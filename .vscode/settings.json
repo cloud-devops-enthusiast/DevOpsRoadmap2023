@@ -3,9 +3,10 @@
         "Programming Language/Java/Step1. Java Fundamentals/Programs/Loops",
         "Programming Language/Java/Step1. Java Fundamentals/Programs/Functions",
         "Programming Language/Java/Step1. Java Fundamentals/Programs/Data Types and Variables",
+        "Programming Language/Java/Step1. Java Fundamentals/Programs/Data Structures",
         "Programming Language/Java/Step1. Java Fundamentals/Programs/Conditionals",
         "Programming Language/Java/Step1. Java Fundamentals/Programs/Basic Syntax",
-        "Programming Language/Java/Step1. Java Fundamentals/Programs/Data Structures"
+        "Programming Language/Java/Step1. Java Fundamentals/Programs/Hash Table"
     ],
     "java.debug.settings.onBuildFailureProceed": true
 }
