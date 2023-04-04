@@ -112,3 +112,30 @@ For example you can think about a file just like this which uses a code editor l
 - The file permissions represent the access rights of the users and can be numeric (755) or symbolic (rwxr-xr-x). Here the first digit represents the access rights for the owner of the file, the second digit represents the access rights for the group of the file and the third digit represents the access rights for the other users and similar to that for the symbolic representation.
 
 - The *chmod*, *chown* and *chgrp* commands are used to change the file permissions and work with them.
+
+
+**Linux Distribution**
+
+- A linux distribution is just like flavors of ice cream, as every flavor is different from the other and has its own taste the distributions are different from each other and have their own features and characteristics.
+
+- These different distributions are maintained by the different organizations and the developers worldwide who make the choices that further defines the distribution and maintains it over the time.
+
+- Distributions are the packages which are made by the developers worldwide consisting of different pre-installed softwares or tools.
+
+- The distributions also decide how the system is configured and how the system works.
+
+- The linux distributions also has a variation of linux kernal used in them.
+
+- Linux distributions are designed in such a way that they can use the specific hardware and software for example the Raspbian is designed to work on the raspberry pi hardware and the android is designed to work on the android hardware and so on.
+
+- As we all know different flavors have different looks like the chocolate ice cream with some chocolate chips in it, the different distributions have different kinds of core utilities like GNU Coreutils, BusyBox or other toolkits and purpose specific softwares like the web servers, desktop environments, etc. The purpose specific softwares mostly decide the use-case of that specific linux distribution.
+
+- For instance you can consider the case Ubuntu uses a system called Netplan to configure the network whereas the fedora and redhat uses the network manager to configure the network.
+
+- Debian or Ubuntu based distributions use the apt package manager to install the softwares whereas the redhat or fedora based distributions use the dnf package manager to install the softwares.
+
+- Even for the privilege management the distributions use different methods but debian does not include sudo, so for using the root user you need to login as the root user and switch back to the normal user when you're done with your changes.
+
+- The same software on different linux distributions can have different versions for example the apache web server on the ubuntu is called as Apache 2 while on redhat it is called as httpd.
+
+- Many distros are based on their upstreams distros like redhat is based on fedora, ubuntu is based on debian, etc.
