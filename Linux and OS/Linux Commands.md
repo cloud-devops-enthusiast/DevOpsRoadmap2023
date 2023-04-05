@@ -1,16 +1,31 @@
-**Linux Commands**
+**The Shell**
 
-**Basic Linux Commands**
+The shell is a program that takes keyboard input as text and executes the commands that are typed which return the output to the screen. Shell is an environment in which we can run our commands, programs and shell scripts. Each flavor of shell has its own set of commands and features.
 
-- ls: list directory contents
-- cd: change directory
-- pwd: print name of current/working directory
-- mkdir: make directories
-- rmdir: remove empty directories
-- touch: create empty files
-- cp: copy files and directories
-- mv: move (rename) files
-- vi: edit text files (Press i to insert text, Esc to exit insert mode, :wq to save and exit)
-- chmod: change file mode bits
-- ping: send ICMP ECHO_REQUEST to network hosts
-- netstat: display network connections, routing tables, interface statistics, masquerade connections, and multicast memberships
+**Commands**
+
+Commands are the basic building blocks of the shell.
+
+- *echo:* This command is used to display a line of text/string that is specified by the user.
+
+```
+echo Hello World
+```
+
+- *date:* This command is used to display the current date and time.
+
+```
+date
+```
+
+- *whoami:* This command is used to display the username of the current user.
+
+```
+whoami
+```
+
+- *pwd:* This command is used to display the present working directory.
+
+```
+pwd
+```
