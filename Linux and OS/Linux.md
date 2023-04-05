@@ -1,40 +1,40 @@
 **Linux**
 
-The name linux is given to an operating system which is based on the linux kernal. Different OS that use the linux kernal are called as Linux Distros. Some of the popular linux distros are Ubuntu, Debian, Red Hat, CentOS, Fedora, etc. Linux is everywhere today from our cars to our smartphones, our day to day OS and much more. Linux can be paired with both hardware and software to unleash the power of that thing. Developers using linux allows them to create and deploy applications faster and more efficiently. Linux has a huge amount of open source software and forums available for developers to use and learn from. Linux is also a very secure OS and is used by many companies for their security needs.
+The name linux is given to an operating system which is based on the linux kernel. Different OS that use the linux kernel are called as Linux Distros. Some of the popular linux distros are Ubuntu, Debian, Red Hat, CentOS, Fedora, etc. Linux is everywhere today from our cars to our smartphones, our day to day OS and much more. Linux can be paired with both hardware and software to unleash the power of that thing. Developers using linux allows them to create and deploy applications faster and more efficiently. Linux has a huge amount of open source software and forums available for developers to use and learn from. Linux is also a very secure OS and is used by many companies for their security needs.
 
 
-**The Linux Kernal**
+**The Linux kernel**
 
-- The core of all linux distributions is the linux kernal. The kernal is the core of the OS and is responsible for managing the hardware and software.
+- The core of all linux distributions is the linux kernel. The kernel is the core of the OS and is responsible for managing the hardware and software.
 
-- As the Linux kernal is open source, with multiple developers around the world contributing to it, making it more secure and stable.
+- As the Linux kernel is open source, with multiple developers around the world contributing to it, making it more secure and stable.
 
-- The linux kernal is that which allows you to communicate with the computer hardware.
+- The linux kernel is that which allows you to communicate with the computer hardware.
 
-- The Linux kernal can run on its own, but it is not very useful in that way as it needs some softwares or programs to communicate with it and make it useful.
+- The Linux kernel can run on its own, but it is not very useful in that way as it needs some softwares or programs to communicate with it and make it useful.
 
-- Today the linux kernal can run on the wide range of hardware making it very versatile and useful. This linux supports the wide range of hardware like the small or micro computers to the large super computers. The kernal can be made specific too for example the car music system kernal that can be a modification of the linux kernal.
+- Today the linux kernel can run on the wide range of hardware making it very versatile and useful. This linux supports the wide range of hardware like the small or micro computers to the large super computers. The kernel can be made specific too for example the car music system kernel that can be a modification of the linux kernel.
 
 ```
                  User Space
                      ^
                      |
                      V
-                Linux Kernal
+                Linux kernel
                      ^
                      |
                      V
               Computer Hardware
 ```
 
-In the above diagram we can see that the user space is the space where the user interacts with the OS, It is more on the side of the GUI and the applications similar to that. The linux kernal is the central core of the whole system which interacts with the User space and computer hardware to make the system calls. The computer hardware is the actual hardware that we use to interact with the computer like the memory, CPU, GPU, etc.
+In the above diagram we can see that the user space is the space where the user interacts with the OS, It is more on the side of the GUI and the applications similar to that. The linux kernel is the central core of the whole system which interacts with the User space and computer hardware to make the system calls. The computer hardware is the actual hardware that we use to interact with the computer like the memory, CPU, GPU, etc.
 
-For example you can think about a file just like this which uses a code editor like VS Code which allows you to write the code and save it onto the system. The code editor is the user space and the linux kernal is the core which allows you to save the file on the local system, where the computer hardware is the actual memory which stores in the storage devices like the hard disk, SSD, etc. For most of the time the kernal does not interacts with the user, but it is the core of the whole system. Kernal can also be edited to make changes to the system. The source code is available online and can be modified to make changes to the system.
+For example you can think about a file just like this which uses a code editor like VS Code which allows you to write the code and save it onto the system. The code editor is the user space and the linux kernel is the core which allows you to save the file on the local system, where the computer hardware is the actual memory which stores in the storage devices like the hard disk, SSD, etc. For most of the time the kernel does not interacts with the user, but it is the core of the whole system. kernel can also be edited to make changes to the system. The source code is available online and can be modified to make changes to the system.
 
 
 **Linux System**
 
-- This refers to a whole system which is based out on the linux kernal.
+- This refers to a whole system which is based out on the linux kernel.
 
 - The linux system uses the additional softwares to control the processes like boot and allows you to manage running programs.
 
@@ -56,7 +56,7 @@ For example you can think about a file just like this which uses a code editor l
 
 - For starting with the shell you can use the bash shell which is the default shell for most of the linux distros.
 
-- A shell can run on the top of the linux kernal inside the user space both in the GUI or just in the text mode running as a console.
+- A shell can run on the top of the linux kernel inside the user space both in the GUI or just in the text mode running as a console.
 
 - The shells can be used locally(inside the system) or remotely(over the network).
 
@@ -90,7 +90,7 @@ For example you can think about a file just like this which uses a code editor l
 
 - The *var* directory is the directory where the changeable or variable data is stored. Under the var directory there are many subdirectories like the log, cache, lib, etc. You can find the logs of the system in the log directory and the cache of the system in the cache directory.
 
-- The *dev*, *proc* and *sys* directories are created by the linux kernal and are used to store the information about the hardware and the system. It stores the processes that runs the programs or the settings in the kernal and so on.
+- The *dev*, *proc* and *sys* directories are created by the linux kernel and are used to store the information about the hardware and the system. It stores the processes that runs the programs or the settings in the kernel and so on.
 
 
 **User Accounts on Linux**
@@ -124,7 +124,7 @@ For example you can think about a file just like this which uses a code editor l
 
 - The distributions also decide how the system is configured and how the system works.
 
-- The linux distributions also has a variation of linux kernal used in them.
+- The linux distributions also has a variation of linux kernel used in them.
 
 - Linux distributions are designed in such a way that they can use the specific hardware and software for example the Raspbian is designed to work on the raspberry pi hardware and the android is designed to work on the android hardware and so on.
 
