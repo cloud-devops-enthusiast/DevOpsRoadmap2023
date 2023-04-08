@@ -125,5 +125,30 @@ Commands are the basic building blocks of the shell.
 - *rmdir |directory|:* For removing directory with rmdir commands.</td>
 <td>rm |filename|</td>
 </tr>
+<tr>
+<td>find</td>
+<td>This command is used to find files and directories.
+
+- find |directory| -name |filename|: For finding a file in a directory.
+
+- find |directory| -type d -name |directory name|: For finding a directory in a directory.
+</td>
+<td>find |directory| -name |filename|</td>
+</tr>
+<tr>
+<td>help</td>
+<td>This command is used to displays the help for other bash commands.</td>
+<td>help |command name|</td>
+</tr>
+<tr>
+<td>man</td>
+<td>This command is used to display the manual or documents for the bash commands.</td>
+<td>man |command name|</td>
+</tr>
+<tr>
+<td>exit</td>
+<td>This command is used to exit the shell.</td>
+<td>exit</td>
+</tr>
 </tbody>
 </table>
