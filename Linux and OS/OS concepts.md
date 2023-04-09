@@ -77,3 +77,53 @@ In linux or any other Operating System, there are services that can be started a
 ```
 service |service name| start/stop/status/restart
 ```
+
+There are multiple services which reside in the ```/etc/init.d/``` directory, which are stored in the form of scripts. These services are responsible for starting and stopping the services in the system. This ```init.d``` is a daemon which is the first process of the linux system, only after which the system starts the other processes, services, daemons and threads are started by the same. i.e ```init.d``` is the configuration database for the init process. The daemon script let's you start, stop, restart, and check the status of the services in the system. 
+
+![Init.d](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/71fc600e71c7d6fab617bad20204ed1c36ab0ff3/Images/Screenshot%202023-04-09%20144006.png "Init.d")
+
+You can use the commands like ```start``` or ```stop```.
+
+```
+/etc/init.d/|service name| start/stop/status/restart
+```
+
+*Linux Daemon*
+
+A daemon is a program with a unique purpose. They are the utility programs that run silently in the background to monitor and take care of certain subsystems to ensure that the operating system runs properly. For example, A printer daemon monitors amd takes care of the printing service or A network daemon monitors and maintains network communication and much more. Daemons perform some actions at regular intervals, or in response to some events. Example of the sound which comes from your system when you setup a alarm or a timer. The daemon is responsible for playing the sound at the specified time. There are many daemons that run on a linux system, each specially which is designed to look after the processes and services in the system. One more thing to mention here as these daemons are not under the direct control of a user, they are effectively invisible, but that doesn't mean that they are not there. The daemons keep doing the bulky work in the background.
+
+There are numerous daemons which are running in the systems, To identify a daemon, look for a process that ends with a letter ```d```, Its a general rule in linux that the name of daemons ends this way. You can check for the running daemons in the system by checking the process listings in the system using ```ps```, ```top``` or ```htop``` commands.
+
+You can also make use of the ```pstree``` command, which can be useful to show the processes currently running in the system, in a tree format.
+
+*Spawning Daemons*
+
+This seems to be a bit spooky like unleashing some beast or something like but it is not like that. A process is a running program in the system, at any given moment of time, where it can either be running, sleeping or zombie. Zombie is something where a process which completed its given task, but waiting its parent process to accept the return value, example You have made a request to the server to download some latest web-series and you are waiting for the server to accept the request and send you the data.
+
+There are three types of processes in the system:
+
+- *Interactive Processes,* are those which are run by a user at the command line.
+- *Batch Processes,* are those which are not associated with the command line and are presented from a list of processes. Think of it as a groups of tasks which are run in the background. These kind of processes are best when the system usage is low for example the whatsapp backup process which happens everday when the load on the system is low and the system is idle.
+- *Daemons,* are the programs that run in the background as a service to the system. When system boot is completed and the user logs in, the system initialization process starts spawning (Creating) daemons with a method called forking, eliminating the need of a terminal (which is meant by no controlling terminal). In linux there are many ways of creating a process traditionally it is done by creating a child process by making copy of an existing process
+
+The process which creates daemon is called the initialization (called ```init```) process by forking its own processes to create new ones. Done this way the ```init``` process is the parent of all the daemons in the system.
+
+There is another way to spawn a daemon and that is for another process to fork a child process and then die(A term which is mostly used in place of exit). When a parent process dies, the child process becomes an orphan. When a child process is orphaned, it is adopted by the ```init``` process.
+
+*Example of Linux Daemon*
+
+- *systemd:* The main purpose of this daemon is to check for the service configuration and behaviour of services or processes across linux distributions.
+
+- *udisksd:* This daemon is responsible for carrying out operation like querying, mounting, unmounting, formatting, or detaching storage devices like hard drives, USB drives, etc.
+
+- *logind:* A daemon which managed the user login sessions and the user sessions in the system.
+
+- *httpd:* This is a HTTP service manager. This daemon is normally run with web server software like Apache or Nginx.
+
+- *sshd:* This daemon is responsible for managing the SSH service. This is used on virtualy any servers or systems which accepts the SSH connections.
+
+- *ftpd:* This daemon is responsible for managing the FTP service. This is commanly used for file transfer between the systems. Where one acts as a client and other one as a server.
+
+- *crond:* This daemon is responsible for managing the cron jobs. This is scheduler daemon for time-based actions like software updates or system checks.
+
+Above in all the daemons you can see they are ending with letter ```d``` which is a general rule in linux that the name of daemons ends this way.
