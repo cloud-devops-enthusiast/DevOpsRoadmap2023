@@ -88,6 +88,9 @@ You can use the commands like ```start``` or ```stop```.
 /etc/init.d/|service name| start/stop/status/restart
 ```
 
+![cron](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/f2b27a3cfd695dbb54166f4f12127514a6e17bcb/Images/Screenshot%202023-04-09%20145858.png "start/stop")
+
+
 *Linux Daemon*
 
 A daemon is a program with a unique purpose. They are the utility programs that run silently in the background to monitor and take care of certain subsystems to ensure that the operating system runs properly. For example, A printer daemon monitors amd takes care of the printing service or A network daemon monitors and maintains network communication and much more. Daemons perform some actions at regular intervals, or in response to some events. Example of the sound which comes from your system when you setup a alarm or a timer. The daemon is responsible for playing the sound at the specified time. There are many daemons that run on a linux system, each specially which is designed to look after the processes and services in the system. One more thing to mention here as these daemons are not under the direct control of a user, they are effectively invisible, but that doesn't mean that they are not there. The daemons keep doing the bulky work in the background.
