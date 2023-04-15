@@ -30,4 +30,3 @@ The CPU seeks the device registers as memory locations which are mapped to their
 The portion of the physical memory dedicated or reserved for the device interactions in controlled by the *Base Address Registers.*
 
 There is a another method by which the CPU interacts with the device, this is called as *I/O Port Mapped I/O.* In this method, the CPU interacts with the device via the special instructions. Each instruction needs to specify the target device - the I/O port - as well as some of the values which will be passed to the device.
-
