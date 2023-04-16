@@ -1,4 +1,4 @@
-**Virtualization**
+**Virtualization (Virtual + Realization)**
 
 Virtualization is the process which allows you for more efficient utilization of the hardware or physical utilization and one of the foundation of containers and cloud computing. In the process of virtualization, takes the help of the software which is used to create an abstraction layer over the computer hardware which allows every single element of your computer to be divided into multiple virtual computers which are commonly called as virtual machines(VMs). Every single VM (Virtual Machine) out of which can have its own operating system (OS) and with their own set of applications. Here every single VM acts as a separate computer which can be used as per the requirement.
 
@@ -33,3 +33,40 @@ As in todays world virtualization is a common practice among the Enterprises IT 
 - *Windows Virtualization:* Windows Server 2016 and Windows 10 both support Hyper-V, which is Microsoft's hypervisor. Hyper-V is a type 1 hypervisor, which means it runs directly on the hardware. Hyper-V is a full virtualization solution that allows you to run multiple virtual machines on a single physical server. Hyper-V is a free feature of Windows Server 2016 and Windows 10 Pro. Windows Server 2016 also includes a free version of Windows Server 2016 Essentials, which is a simplified version of Windows Server 2016 that is designed for small businesses. Windows Server 2016 Essentials includes Hyper-V, which allows you to run up to two virtual machines on a single physical server.
 
 - *Cloud Virtualization:* Cloud virtualization is the process of creating cloud computing models that can be used to run the applications and services by virtualizing the servers, storage and other physical data center resources. Here the Cloud Providers can provide the virtualized resources to the customers. Like, Infrastructure as a Service (IaaS), which is used to virtualize the servers, storage and networking resources. Platform as a Service (PaaS), which is about the virtualized development tools, databases and other cloud based services you can use to build and run your applications. Software as a Service (SaaS), which makes the use of the software applications you can use on the cloud.
+
+*Hypervisor*
+
+A Hypervisor is kind of virtualization software which can be used to create and run the virtual machines. This is mostly used in cloud hosting and provisioning of the cloud resources used to divide and allocate the resources on the various pieces of hardware. A Hypervisor, is sometimes called a virtual machine monitor (VMM), which isolates the hypervisor operating system and resources from the virtual machines and enables the creation and management of virtual machines. The program which works for the partitioning, isolation or abstraction is called a virtualization hypervisor.
+
+The physical hardware when used by the hypervisor, is often called as *Host*, while the many virtual machines running on the hypervisor are called as *Guests*. The hypervisor uses the resources like the CPU, Memory and Storage as a pool which can be easily reallocated between the existing guests or to the new running virtual machines. The hypervisor gives each virtual machines the resources it needs to run, while also isolating the virtual machines from each other. Hypervisors allocate and manages the scheduling of VM resources against the physical resources of the host.
+
+*Types of Hypervisors*
+
+- *Type 1 Hypervisor:* Type 1 hypervisor which is also called as a native or bare metal hypervisor, which runs directly onto the host's hardware to manage the guest operating systems. In the process, it takes the place of a host operating system and VM resources which are scheduled directly to the hardware by the hypervisor. These kind of hypervisors are mostly used in the enterprise data centers and other server-based environments. KVM, Mircosoft Hyper-V and VMware vSphere are examples of Type 1 hypervisors.
+
+- *Type 2 Hypervisor:* Type 2 hypervisor which is also called as a hosted hypervisor, and is run on a conventional operating system as a software layer or application. It also works by abstracting the guest operating system over the host operating system, which is then executed against the hardware. hypervisor asks the operating system to make the hardware call. A type 2 hypervisor is a better for individual users who want to run multiple operating systems on a single computer. Oracle VirtualBox, VMware Workstation are some of the examples of Type 2 hypervisors. Hosted hypervisors are often found on endpoints like PCs.
+
+
+*Virtual Machine*
+
+A virtual machine or A VM is a Virtual environment which functions as a Virtual System or Computer with its own CPU, memory, Network interfaces and storage, created on a physical hardware system (located off or on premises). Software called a hypervisor seperates the machines resources from the hardware and provisions them appropriately so they can be used by the VM. The physical hardware, equipped with a hypervisor, is called a host machine, host computer, host operating system or simply host. The many VMs that use its resources are called as guest machines, guest computers, guest operating systems or simply guests. VM allows the user with the multiple different operating systems to run on the same hardware. Each os runs in the same way an operating system or applications normally would on the host hardware, so the end user experience within the VM which is nearly identical to a real-time operating system.
+
+The use of VM is important in the area of cloud computing and data centers. Most operating system and application deployment only use a small amount of the physical resources available when deployed to the host of the physical hardware or bare metal. This keeps you from needing to buy additional resources like drives, as well as reducing the amount of power and cooling required to run the hardware.
+
+*Containers*
+
+A container is a lightweight software package which contains all of the dependencies required to execute the contained software application. These dependencies include the system libraries, some third party packages and the other operating system level applications. The containers allows the applications to run quickly and reliably from the one computing environment to another. For example, A docker container image is a lightweight, standalone, executable package of the software which includes everything needed to run the application like Code, Runtime, System Tools, System Libraries and settings.
+
+The container images become containers at runtime and in the case of docker containers, These images become containers when they run on docker engine.
+
+The benefits of containers are:
+
+- *Less Overhead:* As Containers requires less resources than the traditional or hardware virtual machine environments because they don't include the operating system images, which makes them faster to start and use less memory.
+
+- *Increased Portability:* Cotainers are portable across multiple environments, which makes them easy to deploy and scale, while being to run on any infrastructure without any changes.
+
+- *More Consistent Operation:*  As it is known that containers will run the same, regardless of the environment. This makes it easier to develop, test and deploy code.
+
+- *Greater Efficiency:* Containers allow the applications to be more rapidly deployed, patched and scaled, which makes them more efficient.
+
+- *Better Application Development:* Containers support agile and DevOps efforts by allowing the developers to work in standardized environments using common languages and frameworks. This also makes it accelerate the development, testing and production cycle processes.
