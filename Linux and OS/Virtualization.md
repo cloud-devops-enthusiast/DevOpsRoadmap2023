@@ -70,3 +70,7 @@ The benefits of containers are:
 - *Greater Efficiency:* Containers allow the applications to be more rapidly deployed, patched and scaled, which makes them more efficient.
 
 - *Better Application Development:* Containers support agile and DevOps efforts by allowing the developers to work in standardized environments using common languages and frameworks. This also makes it accelerate the development, testing and production cycle processes.
+
+- *Seperation of Responsibility:* Containerization gives a clear separation of responsiblity, as developers can focus on application logic and dependencies, while IT teams can focus on the infrastructure and deployment.
+
+- *Application Isolation:* Containers allow the applications to be isolated from each other and the underlying infrastructure, which makes them more secure.
