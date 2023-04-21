@@ -113,4 +113,20 @@ As the Physical address is divided into two parts:
 
 - Frame Offset (d): This is the required number of the bits to represent the particular word in the frame or the frame size of Physical Address Space or the word number of a frame or frame offset.
 
-The hardware implementation of the paging table can be done using dedicated hardware or using dedicated registers. But the use of the registers for the page table is satisfactory only if the page table is small in size. 
+The hardware implementation of the paging table can be done using dedicated hardware or using dedicated registers. But the use of the registers for the page table is satisfactory only if the page table is small in size. If the page table is large in size, with large number of entries then we can use the TLB (Translation Look-aside Buffer), a special, small, fast look-up hardware cache.
+
+- The TLB is an associative memory which has higher speeds.
+
+- Each entry in the TLB consists of two parts: a tag and a value.
+
+- When this memory is being used, then an item is being compared with all the tags simultaneously. If the tag is found, then the corresponding value is returned.
+
+```
+Let the,
+
+Memory Access Time = m
+
+If the page table are kept in the main memory,
+
+Effective Access Time = m(for page table) + m(for particular page in page table)
+```
