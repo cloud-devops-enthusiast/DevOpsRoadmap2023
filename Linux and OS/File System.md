@@ -68,3 +68,21 @@ Space allocation is the process of allocating the space to the files present in 
   - Linked Allocation: In this method of space allocation, every file has its own list of links to the disk blocks. This link with every file present in the directory has a pointer or link to the next block of the file. This method has no external fragmentation. This method is effectively used in sequential access of files, but it is inefficient in the case of directly accesssing the files.
 
   - Indexed Allocation: In this method of space allocation, a index block is created for every file which contains the pointers to the files. This method is designed so overcome the problems of contiguous and linked allocation methods. Every file has its own index block which contains the pointers to the blocks of the file. In the process, each Directory contains the index block of the file. This method is used in the case of random access of files.
+
+- *Metadata*
+
+Metadata is the information which is stored in the almost any kind of file. This metadata can include the name of the file, the name of the computer, the comments, the date or time of creation, the size of the file, the type of the file, etc. This metadata is stored in the file system and these details can be used by the operating system based on the situation. For example you want to check for the file with some specific author name, then the operating system will search for the metadata of the file and will show you the results. You can also say that the metadata as the file's description. Metadata is stored seperately another than the file's data in seperate directories, sometimes in the same directory as the file or in a structure called as inode.
+
+- *Types of Filesystems*
+
+As there are number of file systems, all have some different logical structures, process of storing the data and some properties like size of the file, name of the file, etc. There are some major file systems which include the followings:
+
+  - File Allocation Table (FAT): This is the most common file system used by the Microsoft Windows. FAT is considered to be as more simple and reliable file system. This file system was designed in 1977 majorly for the floppy disks, but later it was used for the hard disks also.
+
+  - Global File System (GFS): This is the file system which is used by the Linux operating system and it is a shared disk file system. GFS allows the direct access to the shared block storage and then can be used as a local file system. GFS 2.0 is the latest version of GFS with some updated features like the updated metadata system.
+
+  - Hierarchical File System (HFS): This is the file system which is used by the Mac OS. HFS was introduced in 1985 for the floppy and hard disks. HFS actually replaced the Macintosh file system which was used by the Macintosh operating system.
+
+  - New Technology File System (NTFS): This is the default file system used since the windows NT 3.1. This was introduced with providing improvements over the FAT file system, like better metadata support, performance, and use of disk space. NTFS can also be used in Linux and Unix operating systems also through a free, open-source driver called FUSE. Mac OS also supports NTFS, but only in read-only mode.
+
+  - Universal Disk Format (UDF): This is a vendor neutral file system used on the optical discs or DVDs. UDF replaces the ISO 9660 file system. This is the default file system for the DVD video and audio as choosen by the DVD Forum. UDF is also used in the Blu-ray Discs.
