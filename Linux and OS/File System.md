@@ -54,3 +54,17 @@ The file type is a major distinguishing factor for the different files. OS (Oper
     - Each record is having its own address over the file by using which it can be accessed directly.
     - These records are not needed to be in sequence inside the file and they not need to be in any order on the storage device.
 
+  - Indexed sequential access:
+    - This whole model is based on the concept of sequential access.
+    - A whole record of the indexes is created for every record in the file with the pointers to the records.
+    - These indexed records are searched sequentially and the records uses the pointers to access the records directly.
+
+- Space Allocation
+
+Space allocation is the process of allocating the space to the files present in the storage devices like hard disk, floppy disk, etc by the operating system. The space allocation is done by the three main ways to allocate the space to the files:
+
+  - Contiguous Allocation: In this method of space allocation, the space is allocated to files in the form of contiguous address on the disk. This method assigns the space in a linear order or in a sequential order. This method is easy to implement but external fragmentation is a major problem in this method.
+
+  - Linked Allocation: In this method of space allocation, every file has its own list of links to the disk blocks. This link with every file present in the directory has a pointer or link to the next block of the file. This method has no external fragmentation. This method is effectively used in sequential access of files, but it is inefficient in the case of directly accesssing the files.
+
+  - Indexed Allocation: In this method of space allocation, a index block is created for every file which contains the pointers to the files. This method is designed so overcome the problems of contiguous and linked allocation methods. Every file has its own index block which contains the pointers to the blocks of the file. In the process, each Directory contains the index block of the file. This method is used in the case of random access of files.
