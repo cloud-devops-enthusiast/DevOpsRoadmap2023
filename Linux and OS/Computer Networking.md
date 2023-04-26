@@ -1,0 +1,3 @@
+**Computer Networking**
+
+Computer networking can be defined as the interconnection of multiple computing resources and devices with the ability to exchange the data and sharing them with each other. There are multiple devices that make the use of the certain set of rules called as communication protocol to transfer the information between the devices connected in a network via the wired or wireless medium.
