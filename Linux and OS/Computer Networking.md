@@ -10,4 +10,6 @@ The working of computer networking is based on the the size of the computer netw
 
 The computer networks were created at the time of late 1950s for the purpose of military and defense. The network was initially used for transmiting the data over the telephone lines and had limited commercial and its scientific applications. The computer networks in today's world deliver more than the connectivity to the users. These all things are a critical part of the business and the personal lives. In today's world the computer networks can:
 
-- Operate Virtually: In Today's world the computer networks can be operated virtually from anywhere in the world, which allows the physical networking infrastructure that can be partitioned logically for creating multiple "Overlay Networks". 
+- Operate Virtually: In Today's world the computer networks can be operated virtually from anywhere in the world, which allows the physical networking infrastructure that can be partitioned logically for creating multiple "Overlay Networks". In an overlay computer network, all the nodes in the network can be connected to each other and the data can be routed through multiple physical paths. There are multiple enterprise networks which are overlaid on the network.
+
+- Integrate on Large Scale: 
