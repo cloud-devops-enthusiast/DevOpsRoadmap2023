@@ -12,4 +12,18 @@ The computer networks were created at the time of late 1950s for the purpose of 
 
 - Operate Virtually: In Today's world the computer networks can be operated virtually from anywhere in the world, which allows the physical networking infrastructure that can be partitioned logically for creating multiple "Overlay Networks". In an overlay computer network, all the nodes in the network can be connected to each other and the data can be routed through multiple physical paths. There are multiple enterprise networks which are overlaid on the network.
 
-- Integrate on Large Scale: 
+- Integrate on Large Scale: The computer networks can be integrated on a large scale. In today's modern world networking services connect over the physically distributed over the computer networks. The services can optimize the network functions through automation and monitoring to create a large scale, high performance computer network. Networking services can be scaled up or down as per the requirement of the network.
+
+- Respond Quickly to changing conditions: The computer networks can respond quickly to the changing conditions. In modern world, the computer networks can be programmed and managed centrally using the software, so the traffic can be routed and controlled centrally from a single location as it supports virtual traffic management.
+
+- Provide Data Security: All the networking solutions comes with the security features like encryption and access control. There are many third party solutions like antivirus, firewalls and anti-malware can be integrated to make the network more secure.
+
+**Core Components of Computer Networks**
+
+The core components of the computer networks are:
+
+- Network Devices: These are the physical devices or the nodes that are used to connect the multiple computers or the other network devices together inside a computer network. The network devices are also known as the network equipment or the computer networking devices. Example of network devices consists of Modems, Routers, PC's, Servers, Firewalls, Switches, Hubs and Bridges. Each devices has its own functionality and is identified by the network address often has easily recognizable or identifiable name.
+
+- Links: A link can be considered as the transmission medium which is used to connect these multiple devices or nodes together and enabling the transmission of the data between them. The links can be both wired and wireless, like ethernet cable, fiber optic cable, radio waves, microwaves, infrared waves etc. These links can be configured in both ways, either physically or logically whereas the network topology dictates the way in which the links and nodes are related to each other in a network.
+
+- Computer Network Protocols: These are the rules or protocols that all the nodes in a network which are communicating with each other should follow for the mean of proper communication. Common protocols include of TCP/IP (Transmission Control Protocol/Internet Protocol), IEEE 802, Ethernet/Fast Ethernet/Gigabit Ethernet, WLAN (Wireless Local Area Network) and cellular standards.
