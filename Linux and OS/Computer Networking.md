@@ -27,3 +27,11 @@ The core components of the computer networks are:
 - Links: A link can be considered as the transmission medium which is used to connect these multiple devices or nodes together and enabling the transmission of the data between them. The links can be both wired and wireless, like ethernet cable, fiber optic cable, radio waves, microwaves, infrared waves etc. These links can be configured in both ways, either physically or logically whereas the network topology dictates the way in which the links and nodes are related to each other in a network.
 
 - Computer Network Protocols: These are the rules or protocols that all the nodes in a network which are communicating with each other should follow for the mean of proper communication. Common protocols include of TCP/IP (Transmission Control Protocol/Internet Protocol), IEEE 802, Ethernet/Fast Ethernet/Gigabit Ethernet, WLAN (Wireless Local Area Network) and cellular standards.
+
+- Network Services: These are the services that are provided by the computer networks. These services can be of different types like the file sharing, data sharing, data transfer, data transmission, data communication, resource sharing, email, audio and video conferencing, voice over IP (VoIP), instant messaging, online gaming and many more.
+
+**Types of Computer Networks**
+
+- Local area Network (LAN): A Local area Network (LAN) is a computer network that is used to connect the computers and the other network devices with each other in a limited geographical area or a small area like a home, office, school, or a group of buildings. These kind of networks are owned, managed and maintained by small companies or a test network for a small-scale prototyping. LAN is usually less costly, as it is mostly build with an inexpensive hardware like hubs, network adapters and ethernet cables. The LAN's data transfer rate is very high, as it is used to transfer the data between the computers and the other network devices in a small area. The LAN's data transfer rate is usually 10 Mbps to 1 Gbps. These LAN's provides higher security and can be easily managed.
+
+- Wide Area Network (WAN): 
