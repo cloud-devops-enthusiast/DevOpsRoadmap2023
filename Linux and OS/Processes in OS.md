@@ -34,3 +34,11 @@ The PCB stands for the Process Control structure, which is a data structure whic
 
 It is also accountable for storing the contents of the process registers, These all are saved when the state of the process changes and then gets returned back to it. The information is updated very quickly in the PCB by the OS, as the process makes the transition from one state to another.
 
+The main reason behind using PCB is to enable the operating system to manage multiple processes efficiently by taking track of the current state of the each process and allocating system resources for use accordingly. Whenever a process is created, the operating system creates a corresponding process control block which is used to process and store all the relevant information about the process in it. The Operating system uses that information in the process control block to oversee the performance of the process and to track it.
+
+Process Control Block, is mainly used by the operating system to manage multiple processes, like process scheduling, process synchronization, process communication, process termination etc. The information which is stored in the PCB is utilized by the operating system to schedule the process for execution. The PCB is also known as the Task Control Block, as it is used to manage the tasks or the processes.
+
+In context, The PCB is a crucial component required in the today's operating system which enables the efficient management of the processes. The PCB is also known as the process descriptor.
+
+**Process States**
+
