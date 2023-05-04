@@ -42,6 +42,22 @@ Stack Section: This section of a process, is used to store the temporary data li
 
 - *CPU Scheduling Information*: The CPU scheduling information is the information which is used to store the information about the process priority, pointers to scheduling queues, etc. Different processes have different priorities, so this information can be further used by the CPU to schedule the processes. Like a shorter process is given a higher priority than the longer process in shortest job first scheduling.
 
+**Process States**
+
+- *New*: The process is in the new state when the process is being created. The process stays in the new state until the process is being admitted to the ready state.
+
+- *Ready*: The process is in the ready state when process is ready for execution. The process moves to this state after it has been created.
+
+- *Run*: The process is in the running state when the process is currently running on the CPU. (For example if there is a single processor, only one process can be executed at the time)
+
+- *Wait*: The process is in the waiting state when the process is waiting for an event or for a resource to be allocated. The process moves to this state when it is being interrupted by a process, when it requests for an I/O resource.
+
+- *Complete*: When a process completes its execution, it moves to the complete state from the running state.
+
+- *Suspend*: The process is considered to be in the suspended state when the process is ready for execution but is not currently has not been placed in the ready queue.
+
+- *Terminate*: The process is considered to be in the terminated state when the process has finished its execution and has been removed from the main memory.
+
 **Process Control Block**
 
 The PCB stands for the Process Control structure, which is a data structure which is maintained by the OS for every single process. The PCB should be identified by an Integer Process ID (PID) and it is unique. This helps you to store all the information about the process running to keep the track of the process. The PCB is stored in the main memory.
