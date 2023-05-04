@@ -28,6 +28,20 @@ Heap Section: This section of a process, is used to allocate memory dynamically 
 
 Stack Section: This section of a process, is used to store the temporary data like the function parameters, return addresses, local variables etc.
 
+**Attributes or Characteristics of a Process**
+
+- *Process ID*: Each process in the operating system has a unique identifier given to it, which is known as the process ID.
+
+- *Process State*: The process state is the current status of the process, which may be new, ready, running, waiting, halted, etc.
+
+- *CPU Registers*: The CPU registers are the registers which are used to store the information which is required by the CPU to execute the process. The CPU registers are used to store the information like the address of the memory location, data to be processed, etc and restore the information back whenever a process is swapped in and out of the CPU. 
+
+- *Accounts Information*: The accounts information is the information which is used for the execution of process, time limits, execution ID, etc.
+
+- *I/O Status Information*: The I/O status information is the information which is used to store the I/O status of the process, like the list of I/O devices allocated to the process, a list of open files, etc.
+
+- *CPU Scheduling Information*: The CPU scheduling information is the information which is used to store the information about the process priority, pointers to scheduling queues, etc. Different processes have different priorities, so this information can be further used by the CPU to schedule the processes. Like a shorter process is given a higher priority than the longer process in shortest job first scheduling.
+
 **Process Control Block**
 
 The PCB stands for the Process Control structure, which is a data structure which is maintained by the OS for every single process. The PCB should be identified by an Integer Process ID (PID) and it is unique. This helps you to store all the information about the process running to keep the track of the process. The PCB is stored in the main memory.
