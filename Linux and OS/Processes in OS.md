@@ -48,7 +48,7 @@ Stack Section: This section of a process, is used to store the temporary data li
 
 - *Ready*: The process is in the ready state when process is ready for execution. The process moves to this state after it has been created.
 
-- *Run*: The process is in the running state when the process is currently running on the CPU. (For example if there is a single processor, only one process can be executed at the time)
+- *Run* or *Executing*: The process is in the running state when the process is currently running on the CPU. (For example if there is a single processor, only one process can be executed at the time)
 
 - *Wait*: The process is in the waiting state when the process is waiting for an event or for a resource to be allocated. The process moves to this state when it is being interrupted by a process, when it requests for an I/O resource.
 
@@ -70,5 +70,6 @@ Process Control Block, is mainly used by the operating system to manage multiple
 
 In context, The PCB is a crucial component required in the today's operating system which enables the efficient management of the processes. The PCB is also known as the process descriptor.
 
-**Process States**
+**Context Switching**
 
+This is a technique used by the Operating System to switch between the processes i.e. to switch between the processe from one state to another to execute its task using CPU's in the system. Whenever it switches between the processes, the system stores the old running processes in the form of registers and assigns the CPU to the new processes to execute its tasks. As the new process is in execution the system, the other process must need to wait in the ready queue to be executed. The execution process of the older process is resumed from the point where it was left off. This also defines the characteristics of the multitasking operating system, in which the CPU is allocated to the multiple processes to execute multiple tasks without the need of addtional processors.
