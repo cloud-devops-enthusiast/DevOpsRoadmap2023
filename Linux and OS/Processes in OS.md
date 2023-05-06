@@ -73,3 +73,17 @@ In context, The PCB is a crucial component required in the today's operating sys
 **Context Switching**
 
 This is a technique used by the Operating System to switch between the processes i.e. to switch between the processe from one state to another to execute its task using CPU's in the system. Whenever it switches between the processes, the system stores the old running processes in the form of registers and assigns the CPU to the new processes to execute its tasks. As the new process is in execution the system, the other process must need to wait in the ready queue to be executed. The execution process of the older process is resumed from the point where it was left off. This also defines the characteristics of the multitasking operating system, in which the CPU is allocated to the multiple processes to execute multiple tasks without the need of addtional processors.
+
+The need of context switching is for the following reasons:
+
+- If any high priority tasks comes and gets into the ready queue, the present running process will be shut down or stopped by the high priority process to complete its execution.
+
+- If any running process is waiting for the I/O operation, the current process will be swapped out by the another process to complete its executio, as the I/O request is completed the process will be swapped in again to complete its execution. Context switching helps here in storing the state of the process and resuming it back when the process is swapped out again.
+
+- If any interruption occurs, while process is in execution, the current process status is stored as registers using the context switching. After resolving the interruption, the process switches from the wait state and switch to ready state to complete its execution.
+
+
+**Mode Switching**
+
+The mode switching changes the process privilege between the modes like the user mode and kernal mode while the process switch changes the process states between multiple states. Firstly there are two modes in which the programs execute, First is the User Mode and Another is Kernal Mode. When the process is being executed in the user domain, the mode is user mode. When the process is being executed in the kernal domain, the mode is kernal mode and this mode includes interrupt handlers, kernal processes, base kernal, kernal extensions, etc. A mode switch occurs when the process requests for a system resource. This happens by the system call interface or by an interrupt. System call allows user mode process to call a kernal function from user mode. Programming libraries allow accessing the functions that directly or indirectly invoke the system.
+
