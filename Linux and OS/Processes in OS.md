@@ -42,6 +42,14 @@ Stack Section: This section of a process, is used to store the temporary data li
 
 - *CPU Scheduling Information*: The CPU scheduling information is the information which is used to store the information about the process priority, pointers to scheduling queues, etc. Different processes have different priorities, so this information can be further used by the CPU to schedule the processes. Like a shorter process is given a higher priority than the longer process in shortest job first scheduling.
 
+- *Priority*: Every process has given its own priority, which is used by the CPU to schedule the processes. The higher the priority of the process, the higher is the preference given to the process by the CPU. This is also stored in the PCB.
+
+- *General Purpose Registers*: Every process has its own set of registers which are used to store the information which is required by the CPU to execute the process. The CPU registers are used to store the information like the address of the memory location, data to be processed, etc and restore the information back whenever a process is swapped in and out of the CPU.
+
+- *List of Open Files*: At the time of process execution, the process may need some files to be present in the main memory for its execution. So, the operating system needs to keep a track of all the files which are being used by the process. This information is stored in the PCB.
+
+- *List of Open Devices*: At the time of process execution, the process may need some kind of devices to be present in the main memory and connected to the system for its execution. So, the operating system needs to keep a track of all the devices which are being used by the process. This information is stored in the PCB.
+
 **Process States**
 
 - *New*: The process is in the new state when the process is being created. The process stays in the new state until the process is being admitted to the ready state.
@@ -81,7 +89,6 @@ The need of context switching is for the following reasons:
 - If any running process is waiting for the I/O operation, the current process will be swapped out by the another process to complete its executio, as the I/O request is completed the process will be swapped in again to complete its execution. Context switching helps here in storing the state of the process and resuming it back when the process is swapped out again.
 
 - If any interruption occurs, while process is in execution, the current process status is stored as registers using the context switching. After resolving the interruption, the process switches from the wait state and switch to ready state to complete its execution.
-
 
 **Mode Switching**
 
