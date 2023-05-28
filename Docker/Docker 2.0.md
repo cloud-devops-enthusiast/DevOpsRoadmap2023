@@ -147,3 +147,63 @@ docker attach ddd2
 ```
 git --version
 ```
+
+**Creating an Image with ADD instruction**
+
+- Creating a Docker File.
+
+```
+FROM alpine:3.5
+Run apk update
+ADD http://www.vlsitechnology.org/pharosc_8.4.tar.gz .
+```
+
+![Image 10](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/16c7773631b26f8e35f3863051767ddacfe0baa1/Images/Screenshot%202023-05-28%20142446.png)
+
+- Building the Docker Image from the Docker File.
+
+```
+docker build -t abhinav41999/alpine-add .
+```
+
+![Image 11](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/16c7773631b26f8e35f3863051767ddacfe0baa1/Images/Screenshot%202023-05-28%20142512.png)
+
+- Tagging the created docker image.
+
+```
+docker tag abhinav41999/alpine-add:latest abhinav41999/alpine-add:v1.0
+```
+
+![Image 12](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/16c7773631b26f8e35f3863051767ddacfe0baa1/Images/Screenshot%202023-05-28%20142512.png)
+
+- Checking for the created image.
+
+```
+docker images
+```
+
+![Image 13](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/16c7773631b26f8e35f3863051767ddacfe0baa1/Images/Screenshot%202023-05-28%20142630.png)
+
+- Running the recently created image.
+
+```
+docker run -itd abhinav41999/alpine-add:v1.0 /bin/sh
+```
+
+![Image 14](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/16c7773631b26f8e35f3863051767ddacfe0baa1/Images/Screenshot%202023-05-28%20142716.png)
+
+- Checking for the running container.
+
+```
+docker ps
+```
+
+- Checking for the downloaded file in the container.
+
+```
+docker attach 064d
+
+ls -ltr
+```
+
+![Image 15](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/16c7773631b26f8e35f3863051767ddacfe0baa1/Images/Screenshot%202023-05-28%20142805.png)
