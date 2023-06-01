@@ -404,3 +404,79 @@ docker run abhinav41999/entrypoint:v2.0
 ```
 
 ![Image 31](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/bd82568b38aaeb4fb8705a99991e8dc8f1d65060/Images/Screenshot%202023-06-01%20224221.png)
+
+
+**WORKDIR instruction**
+
+- Creating a Docker File. In this docker file we will be using the WORKDIR instruction which lets us set the working directory.
+
+```
+FROM alpine:3.9.3
+
+RUN apk update
+
+WORKDIR /opt/folder1
+RUN echo "Hello Guys, This is my first Dockerfile inside this container" > amp.txt
+
+WORKDIR /var/tmp
+```
+
+- Building the Docker Image from the Docker File.
+
+```
+docker build -t abhinav41999/workdirv1.0:v1.0 .
+```
+
+![Image 32](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/f0db1dff9b4ecdeb11ad38185d964734651a60a2/Images/Screenshot%202023-06-01%20225808.png)
+
+- Checking for the created image.
+
+```
+docker images
+```
+
+![Image 33](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/f0db1dff9b4ecdeb11ad38185d964734651a60a2/Images/Screenshot%202023-06-01%20225841.png)
+
+- Running the created Docker Image with the command "pwd" to check the working directory which we set in the Dockerfile.
+
+```
+docker run abhinav41999/workdirv1.0:v1.0 pwd
+```
+
+![Image 34](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/f0db1dff9b4ecdeb11ad38185d964734651a60a2/Images/Screenshot%202023-06-01%20230039.png)
+
+- Creating a docker file in which we will be setting the environment variable as path.
+
+```
+FROM alpine:3.9.3
+
+RUN apk update
+
+ENV DIRPATH /mypath
+
+WORKDIR $DIRPATH
+```
+
+- Building the Docker Image from the Docker File.
+
+```
+docker build -t abhinav41999/workdirv2.0:v2.0 .
+```
+
+![Image 35](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/f0db1dff9b4ecdeb11ad38185d964734651a60a2/Images/Screenshot%202023-06-01%20230705.png)
+
+- Checking for the created image.
+
+```
+docker images
+```
+
+![Image 36](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/f0db1dff9b4ecdeb11ad38185d964734651a60a2/Images/Screenshot%202023-06-01%20230813.png)
+
+- Running the created Docker Image with the command "pwd" to check the working directory which we set in the Dockerfile.
+
+```
+docker run abhinav41999/workdirv2.0:v2.0 pwd
+```
+
+![Image 37](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/f0db1dff9b4ecdeb11ad38185d964734651a60a2/Images/Screenshot%202023-06-01%20230922.png)
