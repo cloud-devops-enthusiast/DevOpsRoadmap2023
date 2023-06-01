@@ -327,3 +327,80 @@ docker run abhinav41999/cmd1.0:1.0
 ```
 
 ![Image 24](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/cb15517b08e27c4c5c3eafb595a8772e1261f08f/Images/Screenshot%202023-06-01%20220642.png)
+
+
+**Creating an Image and adding ENTRYPOINT instruction**
+
+- Creating a Docker File. In this case we are using the ENTRYPOINT instruction in Executable form.
+
+```
+FROM alpine:3.6
+RUN apk update
+
+ENTRYPOINT ["/bin/echo", "Hello in this for you can see entrypoint instructuion in Executable form !!!"]
+```
+
+- Building the Docker Image from the Docker File.
+
+```
+docker build -t abhinav41999/entrypoint:v1.0 .
+```
+
+![Image 25](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/bd82568b38aaeb4fb8705a99991e8dc8f1d65060/Images/Screenshot%202023-06-01%20222723.png)
+
+- Checking for the created image.
+
+```
+docker images
+```
+
+![Image 26](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/bd82568b38aaeb4fb8705a99991e8dc8f1d65060/Images/Screenshot%202023-06-01%20222917.png)
+
+- Running the created Docker Image.
+
+```
+docker run abhinav41999/entrypoint:v1.0
+```
+
+![Image 27](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/bd82568b38aaeb4fb8705a99991e8dc8f1d65060/Images/Screenshot%202023-06-01%20223007.png)
+
+- Creating a Docker File. In this case we are using the ENTRYPOINT instruction in Shell form.
+
+```
+FROM alpine:3.6
+RUN apk update
+
+ENTRYPOINT echo "Hello in this for you can see entrypoint instruction in Shell form !!!"
+```
+
+- Building the Docker Image from the Docker File.
+
+```
+docker build -t abhinav41999/entrypoint:v2.0 .
+```
+
+![Image 28](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/bd82568b38aaeb4fb8705a99991e8dc8f1d65060/Images/Screenshot%202023-06-01%20223524.png)
+
+- Checking for the created image.
+
+```
+docker images
+```
+
+![Image 29](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/bd82568b38aaeb4fb8705a99991e8dc8f1d65060/Images/Screenshot%202023-06-01%20223605.png)
+
+- Running the created Docker Image.
+
+```
+docker run abhinav41999/entrypoint:v2.0
+```
+
+![Image 30](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/bd82568b38aaeb4fb8705a99991e8dc8f1d65060/Images/Screenshot%202023-06-01%20223636.png)
+
+- Running the container and overriding the ENTRYPOINT instruction.
+
+```
+ docker run --entrypoint "bin/echo" abhinav41999/entrypoint:v2.0 "Hello Guys, I am taking over the existing entrypoint !!!"
+```
+
+![Image 31](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/bd82568b38aaeb4fb8705a99991e8dc8f1d65060/Images/Screenshot%202023-06-01%20224221.png)
