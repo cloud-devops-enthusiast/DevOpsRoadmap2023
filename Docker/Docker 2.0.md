@@ -292,3 +292,38 @@ http://localhost:8080/
 ```
 
 ![Image 21](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/52e2aae606bdaddfb9883d32950233455c9f2779/Images/Screenshot%202023-05-29%20225656.png)
+
+
+**Creating an Image and adding CMD instruction**
+
+- Creating a Docker File.
+
+```
+FROM alpine:3.6
+RUN apk update
+CMD echo 'Hello world'
+```
+
+- Building the Docker Image from the Docker File.
+
+```
+docker build -t abhinav41999/cmdv1.0:v1.0 .
+```
+
+![Image 22](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/cb15517b08e27c4c5c3eafb595a8772e1261f08f/Images/Screenshot%202023-06-01%20211110.png)
+
+- Checking for the created image.
+
+```
+docker images
+```
+
+![Image 23](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/cb15517b08e27c4c5c3eafb595a8772e1261f08f/Images/Screenshot%202023-06-01%20211209.png)
+
+- Running the created Docker Image.
+
+```
+docker run abhinav41999/cmd1.0:1.0
+```
+
+![Image 24](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/cb15517b08e27c4c5c3eafb595a8772e1261f08f/Images/Screenshot%202023-06-01%20220642.png)
