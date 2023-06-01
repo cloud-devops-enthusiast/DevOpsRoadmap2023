@@ -206,3 +206,89 @@ ls -ltr
 ```
 
 ![Image 14](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/16c7773631b26f8e35f3863051767ddacfe0baa1/Images/Screenshot%202023-05-28%20142805.png)
+
+**Creating an Image with COPY instruction**
+
+- Creating a Docker File.
+
+```
+FROM nginx:alpine
+LABEL maintainer="Collabnix"
+
+COPY index.html /usr/share/nginx/html/
+ENTRYPOINT ["nginx", "-g", "daemon off;"]
+```
+
+- Creating a index.html file.
+
+```
+"Welcome to Dockerlabs!!!`
+```
+
+- Building the Docker Image from the Docker File.
+
+```
+docker build -t abhinav41999/cpyv1.0:v1.0 .
+```
+
+![Image 15](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/52e2aae606bdaddfb9883d32950233455c9f2779/Images/Screenshot%202023-05-29%20223823.png)
+
+- Checking and Running the recently created image.
+
+```
+docker images
+```
+
+![Image 16](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/52e2aae606bdaddfb9883d32950233455c9f2779/Images/Screenshot%202023-05-29%20224414.png)
+
+```
+docker container run -d --rm --name myapp -p 80:80 abhinav41999/cpyv1.0:v1.0
+```
+
+![Image 17](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/52e2aae606bdaddfb9883d32950233455c9f2779/Images/Screenshot%202023-05-29%20225535.png)
+
+- Checking the localhost for the output of the index.html file.
+
+```
+http://localhost/
+```
+
+![Image 18](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/52e2aae606bdaddfb9883d32950233455c9f2779/Images/Screenshot%202023-05-29%20224420.png)
+
+
+- Editing the existing dockerfile with the below content. This contains the COPY instruction in Multi-Stage Dockerfile.
+
+```
+FROM alpine AS stage1
+LABEL maintainer="Collabnix"
+RUN echo "Welcome to Docker Labs!" > /opt/index.html
+
+FROM nginx:alpine
+LABEL maintainer="Collabnix"
+COPY --from=stage1 /opt/index.html /usr/share/nginx/html/
+ENTRYPOINT ["nginx", "-g", "daemon off;"]
+```
+
+- Building the Docker Image from the Docker File.
+
+```
+docker build -t abhinav41999/cpyv1.1:v1.1 .
+```
+
+![Image 19](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/52e2aae606bdaddfb9883d32950233455c9f2779/Images/Screenshot%202023-05-29%20225416.png)
+
+- Running the created Docker Image.
+
+```
+docker container run -d --rm --name myapp2 -p 8080:80 abhinav41999/cpyv1.1:v1.1
+```
+
+![Image 20](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/52e2aae606bdaddfb9883d32950233455c9f2779/Images/Screenshot%202023-05-29%20225554.png)
+
+- Checking the localhost for the output of the index.html file.
+
+```
+http://localhost:8080/
+```
+
+![Image 21](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/52e2aae606bdaddfb9883d32950233455c9f2779/Images/Screenshot%202023-05-29%20225656.png)
