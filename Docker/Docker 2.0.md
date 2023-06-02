@@ -480,3 +480,49 @@ docker run abhinav41999/workdirv2.0:v2.0 pwd
 ```
 
 ![Image 37](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/f0db1dff9b4ecdeb11ad38185d964734651a60a2/Images/Screenshot%202023-06-01%20230922.png)
+
+- Creating a docker file in which we will be creating multiple directories.
+
+```
+FROM alpine:3.9.3
+
+RUN apk update
+
+ENV DIRPATH /opt
+
+WORKDIR $DIRPATH
+
+RUN echo "Welcome to Docker Practice" > opt1.txt
+
+WORKDIR folder1
+
+RUN echo "Welcome to Docker Practice" > folder1.txt
+
+WORKDIR folder2
+
+RUN echo "Welcome to Docker Practice" > folder2.txt
+```
+
+- Building the Docker Image from the Docker File.
+
+```
+docker build -t abhinav41999/workdir3.0:v3.0 .
+```
+
+![Image 38](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/0dc92419c170fc0db4b8c5e4b7504255395a6ca0/Images/Screenshot%202023-06-02%20223924.png)
+
+- Checking for the created image.
+
+```
+docker images
+```
+
+![Image 39](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/0dc92419c170fc0db4b8c5e4b7504255395a6ca0/Images/Screenshot%202023-06-02%20224023.png)
+
+- Running the created Docker Image with the command "PWD" to check the working directory which we set in the Dockerfile.
+
+```
+docker run -it abhinav41999/workdir3.0:v3.0 pwd
+```
+
+![Image 40](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/0dc92419c170fc0db4b8c5e4b7504255395a6ca0/Images/Screenshot%202023-06-02%20224235.png)
