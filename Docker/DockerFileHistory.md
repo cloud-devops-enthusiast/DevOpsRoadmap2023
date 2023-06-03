@@ -23,3 +23,10 @@ LABEL maintainer="Collabnix"
 COPY index.html /usr/share/nginx/html/
 ENTRYPOINT ["nginx","-g","daemon off;"]
 ```
+
+```
+FROM alpine:3.6
+RUN apk update
+
+ENTRYPOINT ["/bin/echo", "Hello in this for you can see entrypoint instructuion in Executable form !!!"]
+```
