@@ -526,3 +526,104 @@ docker run -it abhinav41999/workdir3.0:v3.0 pwd
 ```
 
 ![Image 40](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/0dc92419c170fc0db4b8c5e4b7504255395a6ca0/Images/Screenshot%202023-06-02%20224235.png)
+
+**RUN instruction**
+
+- Create a Dockerfile with the RUN instruction.
+
+```
+FROM alpine:3.9.3
+
+RUN apk update
+
+RUN apk add --update
+
+RUN apk add curl
+
+RUN rm -rf /var/cache/apk/
+
+RUN date > date.txt
+
+RUN cat date.txt
+```
+
+- Building the Docker Image from the Docker File.
+
+```
+docker build -t abhinav41999/run_insv1:v1.0 .  
+```
+
+![Image 41](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/4102e058c74a62b5cb966767206b92d4f92dfb00/Images/Screenshot%202023-06-03%20120549.png)
+
+
+- Checking the layers of the Docker Image.
+
+```
+docker image history abhinav41999/run_insv1:v1.0
+```
+
+![Image 42](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/4102e058c74a62b5cb966767206b92d4f92dfb00/Images/Screenshot%202023-06-03%20121329.png)
+
+- Checking for the created image.
+
+```
+docker images
+```
+
+![Image 43](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/4102e058c74a62b5cb966767206b92d4f92dfb00/Images/Screenshot%202023-06-03%20120626.png)
+
+- Running the created Docker Image.
+
+```
+docker run -it abhinav41999/run_insv1:v1.0
+```
+
+![Image 44](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/4102e058c74a62b5cb966767206b92d4f92dfb00/Images/Screenshot%202023-06-03%20122631.png)
+
+- Checking the date.txt file.
+
+```
+cat date.txt
+```
+
+- Create a Dockerfile with the RUN instruction.
+
+```
+FROM alpine:3.9.3
+
+RUN apk add --update && \
+    apk add curl && \
+    rm -rf /var/cache/apk/
+```
+
+- Building the Docker Image from the Docker File.
+
+```
+docker image build -t run_insv2:v2.0 .
+```
+
+![Image 45](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/4102e058c74a62b5cb966767206b92d4f92dfb00/Images/Screenshot%202023-06-03%20123347.png)
+
+- Checking for the created image.
+
+```
+docker images
+```
+
+![Image 46](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/4102e058c74a62b5cb966767206b92d4f92dfb00/Images/Screenshot%202023-06-03%20123750.png)
+
+- Checking the layers of the Docker Image.
+
+```
+docker image history run_insv2:v2.0
+```
+
+![Image 47](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/4102e058c74a62b5cb966767206b92d4f92dfb00/Images/Screenshot%202023-06-03%20124145.png)
+
+- Running the created Docker Image.
+
+```
+docker run run_insv2:v2.0
+```
+
+![Image 48](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/4102e058c74a62b5cb966767206b92d4f92dfb00/Images/Screenshot%202023-06-03%20125556.png)
