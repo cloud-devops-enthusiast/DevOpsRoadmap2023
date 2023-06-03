@@ -627,3 +627,192 @@ docker run run_insv2:v2.0
 ```
 
 ![Image 48](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/4102e058c74a62b5cb966767206b92d4f92dfb00/Images/Screenshot%202023-06-03%20125556.png)
+
+**Creating Image with ARG Instruction**
+
+- Create a docker file with ARG instruction.
+
+```
+FROM alpine:3.9.3
+
+#Setting a default value to an argument
+
+ARG WELCOME_USER=centurix
+
+ENV DIRPATH /opt
+
+WORKDIR $DIRPATH
+
+RUN echo "Welcome ${WELCOME_USER}, to the immersive world of Docker" > message.txt
+
+CMD cat message.txt
+```
+
+- Building the Docker Image from the Docker File.
+
+```
+docker build -t argv1:v1.0 .
+```
+
+![Image 49](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/3168ff97756b3046b7f146437c354dba37170026/Images/Screenshot%202023-06-03%20134616.png)
+
+- Checking for the created image.
+
+```
+docker images
+```
+
+![Image 50](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/3168ff97756b3046b7f146437c354dba37170026/Images/Screenshot%202023-06-03%20134737.png)
+
+- Running the created Docker Image.
+
+```
+docker run argv1:v1.0 
+```
+
+![Image 51](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/3168ff97756b3046b7f146437c354dba37170026/Images/Screenshot%202023-06-03%20135515.png)
+
+- Running the created Docker Image with the argument.
+
+```
+docker run argv1:v1.0 pwd
+```
+
+![Image 52](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/3168ff97756b3046b7f146437c354dba37170026/Images/Screenshot%202023-06-03%20135552.png)
+
+- Building the Docker Image from the existing docker file passing the argument. this way you can bypass the default value of the argument.
+
+```
+docker image build -t argv2:v2 --build-arg WELCOME_USER=Abhinav .
+```
+
+![Image 53](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/cf2f7b3232f2a1207896f99ccfd504f887c6aba9/Images/Screenshot%202023-06-03%20231737.png)
+
+- Checking for the created image.
+
+```
+docker images
+```
+
+![Image 54](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/cf2f7b3232f2a1207896f99ccfd504f887c6aba9/Images/Screenshot%202023-06-03%20155821.png)
+
+- Running the created Docker Image.
+
+```
+docker run argv2:v2
+```
+
+![Image 55](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/cf2f7b3232f2a1207896f99ccfd504f887c6aba9/Images/Screenshot%202023-06-03%20155910.png)
+
+**ENV Instruction**
+
+- Create a docker file with ENV instruction.
+
+```
+FROM alpine:3.9.3
+
+ENV WELCOME_MESSAGE="Welcome to the immersive world of Docker"
+
+CMD ["sh", "-c", "echo $WELCOME_MESSAGE"]
+```
+
+- Building the Docker Image from the Docker File.
+
+```
+docker image build -t env_ins:v1.0 .
+```
+
+![Image 56](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/cf2f7b3232f2a1207896f99ccfd504f887c6aba9/Images/Screenshot%202023-06-03%20170400.png)
+
+- Checking for the created image.
+
+```
+docker images
+```
+
+![Image 57](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/cf2f7b3232f2a1207896f99ccfd504f887c6aba9/Images/Screenshot%202023-06-03%20170452.png)
+
+- Running the created Docker Image.
+
+```
+docker run env_ins:v1.0
+```
+
+![Image 58](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/cf2f7b3232f2a1207896f99ccfd504f887c6aba9/Images/Screenshot%202023-06-03%20170643.png)
+
+- Running the container by overriding the environment variable in the parameter.
+
+```
+docker container run --env WELCOME_MESSAGE="Abhinav, Welcome to the paradise of docker!!!" env_ins:v1.0
+```
+
+![Image 59](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/cf2f7b3232f2a1207896f99ccfd504f887c6aba9/Images/Screenshot%202023-06-03%20171523.png)
+
+**Volume Instruction**
+
+- Creating a docker file with VOLUME instruction.
+
+```
+FROM nginx:alpine
+
+VOLUME /myvolume
+
+CMD [ "nginx","-g","daemon off;" ]
+```
+
+- Building the Docker Image from the Docker File.
+
+```
+docker build -t volumev1:v1.0 .
+```
+
+![Image 60](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/cf2f7b3232f2a1207896f99ccfd504f887c6aba9/Images/Screenshot%202023-06-03%20172019.png)
+
+- Running the created Docker Image.
+
+```
+docker run --rm -d --name volume-test volumev1:v1.0
+```
+
+![Image 61](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/cf2f7b3232f2a1207896f99ccfd504f887c6aba9/Images/Screenshot%202023-06-03%20225601.png)
+
+
+- Checking the volume name of the container.
+
+```
+docker container inspect -f '' volume-test
+```
+
+![Image 62](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/cf2f7b3232f2a1207896f99ccfd504f887c6aba9/Images/Screenshot%202023-06-03%20225809.png)
+
+- Listout the volumes available in the local machine
+
+```
+docker volume ls
+```
+
+![Image 63](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/cf2f7b3232f2a1207896f99ccfd504f887c6aba9/Images/Screenshot%202023-06-03%20225732.png)
+
+- To find the volume mount path in the host.
+
+```
+docker volume inspect 8bf7f0739986da5f9e346e677588da077e8221d8a0229c4521a9f65d38813232
+```
+
+![Image 64](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/cf2f7b3232f2a1207896f99ccfd504f887c6aba9/Images/Screenshot%202023-06-03%20225809.png)
+
+- Create a file in the volume mount path.
+
+```
+touch /myvolume/testfile.txt
+```
+
+![Image 65](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/cf2f7b3232f2a1207896f99ccfd504f887c6aba9/Images/Screenshot%202023-06-03%20225852.png)
+
+- Checking file is there in run container.
+
+```
+docker container exec -it volume-test ls myvolume
+```
+
+![Image 66](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/cf2f7b3232f2a1207896f99ccfd504f887c6aba9/Images/Screenshot%202023-06-03%20225938.png)
