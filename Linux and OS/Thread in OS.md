@@ -16,3 +16,8 @@ Thread is a lightweight process that a operating can schedule and run concurrent
 
 - Every threads has their own thread control block(TCB), like PCB of the process. So all of the information about the thread is stored in the TCB. This helps in context switching between the threads, as the threads usually share the same address space and resources synchronization becomes required for activities of the threads.
 
+**Multithreading**
+
+As thread is a lightweight process, which is a part of a process. So the process to achieve parallelism by dividing the process into multiple threads, for example consider a game where the player is playing and at the same time the background music is also playing while your score is also being updated with the actions you are making the character to perform, etc. So, all of these tasks are being performed by the threads to make the game more efficient and faster.
+
+This process of dividing the process into multiple threads is called multithreading. Multithreading is a very important concept in the operating system as it helps in acvhieving parallelism and concurrency. In multithreading, This helps in Operating systems to improve the performance and responsiveness of the overall system. Mutithreading allows multiple running threads to share the same resources of the system like memory, CPU, etc. at the same time. So, the threads can be executed in parallel to each other.
