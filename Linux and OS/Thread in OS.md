@@ -34,4 +34,6 @@ There are three types of threads:
 
 - User Level Threads
 
-User level threads are kind of threads which are not created by using the system calls. These kind of threads has no interference of the kernel. In the cases where theses threads are single handed processes, the kernal comes in between and manages them. 
+User level threads are kind of threads which are not created by using the system calls. These kind of threads has no interference of the kernel. In the cases where theses threads are single threaded processes, the kernal comes in between and manages them. As well as the user level threads are kind of inexpensive as they do not need to create their own address space. As the kernel is not managing the threads the OS is also not aware of the threads. There is less duration of context switching in the user level threads. User level threads are tend to be more efficient than the kernel level threads as they have presence of only the program counter, register set and the stack space. There is one big issue with the user level threads that if one thread performs a blocking system call or there is a page fault then the whole process will be blocked.
+
+- Kernel Level Threads
