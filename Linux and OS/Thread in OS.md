@@ -39,3 +39,17 @@ User level threads are kind of threads which are not created by using the system
 - Kernel Level Threads
 
 A Kernal level Thread is a kind of thread which is recognized by the Operating system easily. These threads has its own thread table which keep the track of the system. The kernal of the operating system helps in taking care of the thread management in the back. Kernal level threads usually somehow have longer duration of context switching time. As we seen there is interaction of kernal with the thread, which makes it more up to date with all the information on all of th threads. In case any process requires more time to process the data, The kernal level thread provide time to it. The implementation of the kernal level threads is more complex than the user level threads, which makes them also slower than the user level threads.
+
+**Components of Thread**
+
+A thread consists of three components:
+
+- Program Counter
+
+- Register Set
+
+- Stack Space
+
+**Concurrency in Operating System**
+
+Concurrency is the process of execution in which multiple instruction sequences are executed at the same time, this condition usually happens in the operating system when serveral process threads are running in parallel where the running process threads communicate with each other through a shared memory or message passing. Concurrency results in the sharing of the resource results in the condition like deadlocks and resource starvation. This also helps in conditions like coordinating execution of process, memory allocation and execution scheduling for maximizing the utilization of the system.
