@@ -64,9 +64,17 @@ There are multiple reasons allowing the concurrency in the operating system:
 
 - Modularity: Breaking down the system functions into separate processes.
 
+There are some advatages of the concurrency as well:
+
+- Concurrency allows multiple applications to run at the same time.
+
+- It makes the better utilization of the resources of the system, like in case when the resources that are unused by the application can be used for other applications.
+
+- Without the concurrency, the system needs to complete the execution of one process before starting the execution of another process.
+
 **Principles of Concurrency**
 
-As Interleaved and Overlapped processes can be said as examples of cocurrrent processes, as these both processes presents the same problem. Here, the execution time cannot be predicted, as it depends on multiple parameters like the activity of the other processes or the way operating system handles interruptions or the scheduling policies of the operating system.
+As Interleaved and Overlapped processes can be said as examples of cocurrrent processes, as these both processes presents the same problem. Here, the execution time cannot be predicted, as it depends on multiple parameters like the activity of the other processes or the way operating system handles interruptions or the scheduling policies of the operating system. 
 
 **Problems in Concurrency**
 
@@ -101,3 +109,21 @@ A parent process can create a child process when more than one process is requir
 - Process Termination
 
 A parent can terminate the execution of one of its child process when a child has exceeded its usage of the reasources allocated to it or the task assigned to this child process is not required now. Also incase, If the parent has terminated than its child must also be terminated.
+
+- **Process Synchronization**
+
+Process synchronization is a way by which you can make coordination between multiple processes of a system while ensuring that they access the shared resources in a controlled way. The main aim of the process synchronization is to solve the race condition and other issues of synchronization in a concurrent system. The main reason of process synchronization is to make sure that multiple process access the shared resources in a controlled way without interfering, resulting in the unpredictable behavior of the system.
+
+There are two types of process synchronization:
+
+- Independent Process: In this kind of process, the execution of one or the multiple processes will not affect the execution of the other process which will be having minimal or no impact on the overall outcome.
+
+- Cooperative Process: In this kind of process, the execution of one process affects the execution of the other process so processes must be synchronized in the order for the correct execution of the process. The best example of such kind of process is the two processes sharing the same data including memory, variables, files, etc at the same time.
+
+**Race Condition**
+
+Under this condition one process will be executing the same code or accessing the same resource at the same time. Due to which there is a race like condition, that is being evolved here resulting in the wrong value of the variable. This condition is also known as the critical section problem.
+
+**Critical Section**
+
+Critical Section is the segment of the code which can be accessed by only one process at a time. This critical section of the code which consists of the variable which needs to be synchronized to maintain the consistency of the data variables. 
