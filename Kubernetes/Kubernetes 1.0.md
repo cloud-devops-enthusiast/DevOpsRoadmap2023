@@ -2,6 +2,11 @@
 
 Kubernetes is a container orchestration system for running and coordinating applications across a cluster of machines. This tool was made in such a way that it can be used in both public and private cloud environments, while managing the complete lifecycle of the containerized applications and services using methods that provide predictability, scalability, and high availability. Kubernetes were first developed by Google and then donated to the cloud native and computing foundation while being open sourced in 2014.
 
+**Kubernetes Architecture**
+
+
+**Need of Kubernetes**
+
 **Key Terms in Kubernetes**
 
 - *Cluster*: A cluster is a set of nodes which are used to run containerized applications.
