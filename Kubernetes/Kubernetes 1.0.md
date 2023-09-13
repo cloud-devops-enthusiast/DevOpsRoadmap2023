@@ -8,19 +8,31 @@ Containers are a way of packaging software in such a way it can be completely is
 
 **Container Orchestration**
 
-Container orchestration is the process of automating the deployment, management, scaling, networking, and availability of container based applications. Container orchestration tools are used to manage the lifecycles of containers and the applications that are running on them. 
+Container orchestration is the process of automating the deployment, management, scaling, networking, and availability of container based applications. Container orchestration tools are used to manage the lifecycles of containers and the applications that are running on them. Some of the popular container orchestration tools are Kubernetes, Docker Swarm, Apache Mesos, and Amazon ECS.
+
+**What happens when you install Kubernetes?**
+
+When you install kubernetes on your machine it installs the following components:
+
+- *API Server*: This acts as a frontend for the kubernetes control plane. All the services, commands, and information are processed by the API server to interact with the kubernetes cluster. 
+
+- *etcd*: This is a key value store that is used to store all the cluster data. This is a distributed key value store that is used to store the configuration data of the cluster and the state of the cluster.
+
+- *Scheduler*: This is a component that is used to distribute the workload across multiple nodes. This continuously checks for the newly created pods and assigns them to the nodes.
+
+- *Controller*: This is the brain of the cluster it acts like a control loop that regulates the state of the cluster. It is responsible for noticing and responding when nodes, pods, or endpoints go down, here the controller makes the decision to bring up new containers or restart the failed ones.
+
+- *Container Runtime*: This is the component that is used to run the containers. This is the software that is used to run the containers. Some of the popular container runtimes are Docker, containerd, and CRI-O.
+
+- *Kubelet*: This is the agent that runs on each node in the cluster. This is responsible for making sure that the containers are running on the nodes as expected.
 
 **Kubernetes Architecture**
 
+- *Cluster*: A cluster is a set of nodes or multiple nodes running in a group which are used to run containerized applications.
 
-**Need of Kubernetes**
+- *Master*: A master is a node that controls the cluster, this is actually responsible for managing the cluster. 
 
-
-**Key Terms in Kubernetes**
-
-- *Cluster*: A cluster is a set of nodes which are used to run containerized applications.
-
-- *Node*: A node is a physical or virtual machine that is used to run applications and services. A cluster is made up of one or more nodes in which there is at least one worker node and at least one master node.
+- *Node*: A node is a physical or virtual machine that is used to run applications and services. Here the containers are launched to make the things work in a streamline fashion. A cluster is made up of one or more nodes in which there is at least one worker node and at least one master node. 
 
 - *Cloud Container*: A cloud container is an image that is used to store all the softwares and dependencies that are required to run an application.
 
@@ -31,5 +43,15 @@ Container orchestration is the process of automating the deployment, management,
 - *ReplicaSet*: A replicaset is a set of pods that are running at the same time in a kubernetes cluster. It is used to define the number of replicas of the application that should be running at the same time.
 
 - *Service*: A Service helps to describe the way in which the application represented by the pods can be accessed. Service mostly consists of the IP address and port number that is used to access the application, which also helps to control internal and external access to the application.
+
+**Master vs Worker Node**
+
+The master node is the brain of the cluster, it has the </>kube-apiserver which gives commands to the </>kubelet which is present on the worker node. The master node and worker node interacts with each other in a seamless way to run the applications, this consists of the actions requested by the master node and worker node providing health information at the same time. 
+
+**Need of Kubernetes**
+
+
+**Key Terms in Kubernetes**
+
 
 **What is the difference between Kubernetes and Docker?**
