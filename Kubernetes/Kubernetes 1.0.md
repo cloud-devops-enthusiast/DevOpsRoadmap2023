@@ -46,7 +46,7 @@ When you install kubernetes on your machine it installs the following components
 
 **Master vs Worker Node**
 
-The master node is the brain of the cluster, it has the </>kube-apiserver which gives commands to the </>kubelet which is present on the worker node. The master node and worker node interacts with each other in a seamless way to run the applications, this consists of the actions requested by the master node and worker node providing health information at the same time. 
+The master node is the brain of the cluster, it has the </>kube-apiserver which gives commands to the </>kubelet which is present on the worker node. The master node and worker node interacts with each other in a seamless way to run the applications, this consists of the actions requested by the master node and worker node providing health information at the same time. All these information are stored in the key value store called etcd which is also present on the master node with the controller and scheduler in place. 
 
 **Need of Kubernetes**
 
@@ -55,3 +55,7 @@ The master node is the brain of the cluster, it has the </>kube-apiserver which 
 
 
 **What is the difference between Kubernetes and Docker?**
+
+**Kubernetes Pods**
+
+A Pod is a single instance of an application in Kubernetes, this is also the smallest object that you can create in kubernetes. Here the containers are not directly deployed on the worker nodes, here the containers are deployed inside the pods. 
