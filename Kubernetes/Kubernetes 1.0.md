@@ -69,3 +69,37 @@ Laterly i found out that the minikube was being used as the "current context" an
 ![Image 2](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/9cfbd4dce4d42cf913b71e3ba728fed2a4c92019/Images/Screenshot%202023-09-15%20235030.png)
 
 After this everything was working fine.
+
+**First Kubernetes Run**
+
+- To Create a Pod in kubernetes using the kubectl command and run the nginx image in it.
+
+```
+kubectl run nginx --image=nginx
+```
+
+![Image 3](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/d488188830af143f80a44edd85f9075fb080322e/Images/Screenshot%202023-09-16%20004530.png)
+
+- To check the status of the pod
+
+```
+kubectl get pods
+```
+
+![Image 4](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/d488188830af143f80a44edd85f9075fb080322e/Images/Screenshot%202023-09-16%20004609.png)
+
+- To describe the pod in detail
+
+```
+kubectl describe pod nginx
+```
+
+![Image 5](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/d488188830af143f80a44edd85f9075fb080322e/Images/Screenshot%202023-09-16%20004734.png)
+
+- To check the status of the pod in detail
+
+```
+kubectl get pods -o wide
+```
+
+![Image 6](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/d488188830af143f80a44edd85f9075fb080322e/Images/Screenshot%202023-09-16%20004800.png)
