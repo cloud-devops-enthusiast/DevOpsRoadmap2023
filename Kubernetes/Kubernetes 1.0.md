@@ -58,4 +58,8 @@ The master node is the brain of the cluster, it has the </>kube-apiserver which 
 
 **Kubernetes Pods**
 
-A Pod is a single instance of an application in Kubernetes, this is also the smallest object that you can create in kubernetes. Here the containers are not directly deployed on the worker nodes, here the containers are deployed inside the pods. 
+A Pod is a single instance of an application in Kubernetes, this is also the smallest object that you can create in kubernetes. Here the containers are not directly deployed on the worker nodes, here the containers are deployed inside the pods. If you have an application that is running on 2 containers deployed on their seperate pods with while running on same node, and the work load increases and you need to scale the application, then you can add more pods to the node to scale the application and similarly you can remove the pods to scale down the application.
+
+*Multi-Conatiner Pods*
+
+A Single pod can have multiple containers running inside it, except for the fact that they're not multiple containers of the same kind. This happens when you have a helper containers in place that helps the main container to run. In such case the helper container is called as the sidecar container. The sidecar container is used to provide the additional functionality to the main container. For example, if you have a main container that is running a web server and you have a sidecar container that is used to processing a user entered data and then pass it to the main container. These helper conatainer stays on the same pod as the main container and they share the same resources and network, this also shares the same lifecycle as the main container in the pod. Like the helper container, is therefore created and destroyed at the same time as the main container.
