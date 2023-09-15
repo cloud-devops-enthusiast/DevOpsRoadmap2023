@@ -56,7 +56,9 @@ A Pod is a single instance of an application in Kubernetes, this is also the sma
 
 A Single pod can have multiple containers running inside it, except for the fact that they're not multiple containers of the same kind. This happens when you have a helper containers in place that helps the main container to run. In such case the helper container is called as the sidecar container. The sidecar container is used to provide the additional functionality to the main container. For example, if you have a main container that is running a web server and you have a sidecar container that is used to processing a user entered data and then pass it to the main container. These helper conatainer stays on the same pod as the main container and they share the same resources and network, this also shares the same lifecycle as the main container in the pod. Like the helper container, is therefore created and destroyed at the same time as the main container.
 
-Challenge 1: I accidently installed the minikube while having docker-desktop installed onto my system and started minikube using "minikube start" command. After installation everything was working fine and stopped the minikube using "minikube stop" command. After this the next time I tried to start the "kubectl" command it was throwing error. 
+**Challenge 1** 
+
+I accidently installed the minikube while having docker-desktop installed onto my system and started minikube using "minikube start" command. After installation everything was working fine and stopped the minikube using "minikube stop" command. After this the next time I tried to start the "kubectl" command it was throwing error. 
 
 ![Image 1](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/9cfbd4dce4d42cf913b71e3ba728fed2a4c92019/Images/Screenshot%202023-09-16%20002906.png)
 
