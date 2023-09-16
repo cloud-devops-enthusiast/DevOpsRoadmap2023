@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: myapp-replicaset
+  labels:
+    app: myapp
+    type: front-end
+spec:
+  template:
+    metadata:
+      name: myapp-pod
+      labels:
+        app: myapp
+        type: front-end
+    spec:
+      containers:
+        - name: nginx-container
+          image: nginx
+  replicas: 3
+  selector:
+  #There is one major difference between replicaset and replica-controller. In replica-controller, we have to specify the label of the pod that we want to replicate. As replicaset can also replicate the pods which are not created with the help of replicaset, so we have to specify the label of the pod that we want to replicate.
+    matchLabels:
+      type: front-end
