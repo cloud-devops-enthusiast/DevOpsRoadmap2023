@@ -150,3 +150,43 @@ Note: Any line starting with "#" is a comment in YAML.
       - fortran
       - erlang
 ```
+
+**Creating a Pod using YAML**
+
+- To create a pod using YAML file and name it as "pod-defintion.yml".
+
+```
+apiVersion: v1
+#This is the version of the api which is used to create the pod.
+kind: Pod
+#This is the kind of the object that is being created. As we are creating a pod here, so the kind is pod.
+metadata:
+    name: myapp-pod
+    labels:
+        app: myapp
+        type: front-end
+#This is data about the object that is being created. Here we are creating a pod named myapp-pod and we are also adding some labels to it.
+spec:
+    containers:
+        - name: nginx-container
+          image: nginx
+#This is the specification of the object that is being created. Here we are creating a pod with a container in it.
+```
+
+- To create the pod using the YAML file.
+
+```
+kubectl create -f pod-definition.yml
+```
+
+- To check the status of the pod.
+
+```
+kubectl get pods
+```
+
+- To describe the pod in detail.
+
+```
+kubectl describe pod myapp-pod
+```
