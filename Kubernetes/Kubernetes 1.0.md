@@ -196,3 +196,62 @@ kubectl describe pod myapp-pod
 ```
 
 ![Image 9](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/b8cfde6bb2c5493825f9300172f83d75a6603d72/Images/Screenshot%202023-09-16%20182506.png)
+
+- To delete the pod.
+
+```
+kubectl delete pod myapp-pod
+```
+
+**Creating a Pod using YAML with Multiple Containers**
+
+- This time we are creating a pod with two containers in it one of them is nginx and the other one is redis.
+
+```
+apiVersion: v1
+kind: Pod
+metadata:
+    name: myapp-pod
+    labels:
+        app: myapp
+        type: front-end
+spec:
+    containers:
+        - name: nginx-container
+          image: nginx
+        - name: redis-container
+          image: redis
+```
+
+- To create the pod using the YAML file.
+
+```
+kubectl create -f redis.yaml
+```
+
+![Image 10](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/371ea823ff0eb3dae8b557440fc5feec9665bc43/Images/Screenshot%202023-09-16%20221544.png)
+
+- To check the status of the pod.
+
+```
+kubectl get pods
+```
+
+![Image 11](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/029b6d572424b5f68d44147b47941c148d28e0bd/Images/Screenshot%202023-09-16%20221807.png)
+
+- To describe the pod in detail.
+
+```
+kubectl describe pod myapp-pod
+```
+
+![Image 12](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/e8522bfc946e7be57c780abcbb8229715ffb7c2c/Images/Screenshot%202023-09-16%20222108.png)
+
+- To delete the pod.
+
+```
+kubectl delete pod myapp-pod
+```
+
+![Image 13](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/696dff57cad2e8da7a605aea7045208688af1f4a/Images/Screenshot%202023-09-16%20222403.png)
+
