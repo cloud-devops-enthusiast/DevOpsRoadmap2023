@@ -255,3 +255,76 @@ kubectl delete pod myapp-pod
 
 ![Image 13](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/696dff57cad2e8da7a605aea7045208688af1f4a/Images/Screenshot%202023-09-16%20222403.png)
 
+**Replication Controller and ReplicaSet**
+
+The replication controller allows the user to run multiple instances of the same pod. Ultimately this lets the user to achieve higher availability. The replication controller is responsible for making sure that the specified number of pods are running at all times. If there is a single container running and the container goes down this replication controller will bring up a new container to make sure that a single container should be running at the time.
+
+If the load on the pods increase and the user wants to scale the application, then the user can increase the number of pods on the node, but if the demand further increases and the user wants to scale the application further, then the user can add more nodes to the cluster and then add more pods to the cluster. This is where the replication controller comes into play, it is used to make sure that the specified number of pods are running at all times.
+
+*Creating a Replication Controller*
+
+- To create a replication controller using the YAML file.
+
+```
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: myapp-replication-controller
+  labels:
+    app: myapp-replication-controller
+    type: front-end
+spec:
+# Here we are using the template of the pod that we created earlier from pod-definition.yaml. This only includes the specification of the pod starting from the metadata and the spec section.
+  template:
+    metadata:
+      name: myapp-pod
+      labels:
+        app: myapp-pod
+        type: front-end
+    spec:
+      containers:
+        - name: nginx-container
+          image: nginx
+replicas: 3
+# Here we are specifying the number of replicas that we want to run at the same time.
+```
+
+- To create the replication controller using the YAML file.
+
+```
+kubectl create -f replication-controller.yaml
+```
+
+![Image 14](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/b49226a2df3c6f1945e81581449d4b154e182c3e/Images/Screenshot%202023-09-16%20233142.png)
+
+- To check the status of the replication controller.
+
+```
+kubectl get replicationcontroller
+```
+
+![Image 15](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/b49226a2df3c6f1945e81581449d4b154e182c3e/Images/Screenshot%202023-09-16%20233228.png)
+
+- To check the status of the pods.
+
+```
+kubectl get pods
+```
+
+![Image 16](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/b49226a2df3c6f1945e81581449d4b154e182c3e/Images/Screenshot%202023-09-16%20233411.png)
+
+- To describe the replication controller in detail.
+
+```
+kubectl describe replicationcontroller myapp-replication-controller
+```
+
+![Image 17](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/0bc7cb05d12c196ac785da349b9030a91e082445/Images/Screenshot%202023-09-16%20233636.png)
+
+- To delete the replication controller.
+
+```
+kubectl delete replicationcontroller myapp-replication-controller
+```
+
+![Image 18](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/f22bad30b34cb156888fd29804d7aa95666a1d09/Images/Screenshot%202023-09-16%20233756.png)
