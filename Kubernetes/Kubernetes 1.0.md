@@ -179,14 +179,20 @@ spec:
 kubectl create -f pod-definition.yml
 ```
 
+![Image 7](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/b8cfde6bb2c5493825f9300172f83d75a6603d72/Images/Screenshot%202023-09-16%20182210.png)
+
 - To check the status of the pod.
 
 ```
 kubectl get pods
 ```
 
+![Image 8](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/b8cfde6bb2c5493825f9300172f83d75a6603d72/Images/Screenshot%202023-09-16%20182302.png)
+
 - To describe the pod in detail.
 
 ```
 kubectl describe pod myapp-pod
 ```
+
+![Image 9](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/b8cfde6bb2c5493825f9300172f83d75a6603d72/Images/Screenshot%202023-09-16%20182506.png)
