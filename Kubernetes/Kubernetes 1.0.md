@@ -103,3 +103,50 @@ kubectl get pods -o wide
 ```
 
 ![Image 6](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/d488188830af143f80a44edd85f9075fb080322e/Images/Screenshot%202023-09-16%20004800.png)
+
+**What is YAML?**
+
+YAML is a file format that is used to store data in a structured way. YAML follows the key value pair format to store the data. Dictionaries are ordered way to store the data in YAML whereas the Lists are ordered way to store the data in YAML.
+
+*Dictionary*
+
+```
+martin:
+  name: Abhinav Singh
+  job: Developer
+  skill: Cloud
+  experience: 1.5 years
+```
+
+*List*
+
+```
+Fruits:
+  - Orange
+  - Apple
+  - Banana
+  - Mango
+  - Grapes
+```
+
+Note: Any line starting with "#" is a comment in YAML.
+
+*Dictionaries and Lists*
+
+```
+# Employee records
+- martin:
+    name: Martin D'vloper
+    job: Developer
+    skills:
+      - python
+      - perl
+      - pascal
+- tabitha:
+    name: Tabitha Bitumen
+    job: Developer
+    skills:
+      - lisp
+      - fortran
+      - erlang
+```
