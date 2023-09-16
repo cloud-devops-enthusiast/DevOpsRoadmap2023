@@ -261,9 +261,9 @@ The replication controller allows the user to run multiple instances of the same
 
 If the load on the pods increase and the user wants to scale the application, then the user can increase the number of pods on the node, but if the demand further increases and the user wants to scale the application further, then the user can add more nodes to the cluster and then add more pods to the cluster. This is where the replication controller comes into play, it is used to make sure that the specified number of pods are running at all times.
 
-*Creating a Replication Controller*
+**Creating a Replication Controller**
 
-- To create a replication controller using the YAML file.
+- Prepare the YAML file for the replication controller.
 
 ```
 apiVersion: v1
@@ -328,3 +328,74 @@ kubectl delete replicationcontroller myapp-replication-controller
 ```
 
 ![Image 18](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/f22bad30b34cb156888fd29804d7aa95666a1d09/Images/Screenshot%202023-09-16%20233756.png)
+
+**Creating a Replicaset**
+
+- Prepare the YAML file for the replicaset.
+
+```
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: myapp-replicaset
+  labels:
+    app: myapp
+    type: front-end
+spec:
+  template:
+    metadata:
+      name: myapp-pod
+      labels:
+        app: myapp
+        type: front-end
+    spec:
+      containers:
+        - name: nginx-container
+          image: nginx
+  replicas: 3
+  selector:
+  #There is one major difference between replicaset and replica-controller. In replica-controller, we have to specify the label of the pod that we want to replicate. As replicaset can also replicate the pods which are not created with the help of replicaset, so we have to specify the label of the pod that we want to replicate.
+    matchLabels:
+    #Here the matchlabels selector matches the labels of the pod that we want to replicate.
+      type: front-end
+```
+
+- To create the replicaset using the YAML file.
+
+```
+kubectl create -f replicaset-definition.yaml
+```
+
+![Image 19](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/922f8f1c7a69497f13ebd9885a719aa523b6df94/Images/Screenshot%202023-09-17%20000040.png)
+
+- To check the status of the replicaset.
+
+```
+kubectl get replicaset
+```
+
+![Image 20](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/922f8f1c7a69497f13ebd9885a719aa523b6df94/Images/Screenshot%202023-09-17%20000123.png)
+
+- To check the status of the pods.
+
+```
+kubectl get pods
+```
+
+![Image 21](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/922f8f1c7a69497f13ebd9885a719aa523b6df94/Images/Screenshot%202023-09-17%20000144.png)
+
+- To describe the replicaset in detail.
+
+```
+kubectl describe replicaset myapp-replicaset
+```
+
+![Image 22](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/922f8f1c7a69497f13ebd9885a719aa523b6df94/Images/Screenshot%202023-09-17%20000342.png)
+
+- To delete the replicaset.
+
+```
+kubectl delete replicaset myapp-replicaset
+```
+
+![Image 23](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/922f8f1c7a69497f13ebd9885a719aa523b6df94/Images/Screenshot%202023-09-17%20000424.png)
