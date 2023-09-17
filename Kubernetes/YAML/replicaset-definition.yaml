@@ -20,4 +20,5 @@ spec:
   selector:
   #There is one major difference between replicaset and replica-controller. In replica-controller, we have to specify the label of the pod that we want to replicate. As replicaset can also replicate the pods which are not created with the help of replicaset, so we have to specify the label of the pod that we want to replicate.
     matchLabels:
+    #Here the matchlabels selector matches the labels of the pod that we want to replicate.
       type: front-end
