@@ -399,3 +399,86 @@ kubectl delete replicaset myapp-replicaset
 ```
 
 ![Image 23](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/922f8f1c7a69497f13ebd9885a719aa523b6df94/Images/Screenshot%202023-09-17%20000424.png)
+
+**Labels and Selectors**
+
+Labels are kind of like tags that are used to identify the objects in the cluster. Replicaset and replication controller uses the labels to identify the pods that they need to replicate. Replicaset also uses them to monitor the pods and if any of the pods goes down then it will bring up a new pod to make sure that the specified number of pods are running at all times.
+
+**Scaling the replicaset**
+
+- *To scale the replicaset using the existing yaml file*, which we used in last demo. Here we will be increasing the number of replicas from 3 to 6.
+
+```
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: myapp-replicaset
+  labels:
+    app: myapp
+    type: front-end
+spec:
+  template:
+    metadata:
+      name: myapp-pod
+      labels:
+        app: myapp
+        type: front-end
+    spec:
+      containers:
+        - name: nginx-container
+          image: nginx
+  replicas: 6
+  selector:
+    matchLabels:
+      type: front-end
+```
+
+- To apply the changes to the replicaset.
+
+```
+kubectl replace -f replicaset-definition-v2.yaml
+```
+
+Note: This command helps the user to replace the running replicaset with the new one from the existing yaml file.\
+
+![Image 24](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/3b3992f628e312dba3f2e322196b1700158cbeed/Images/Screenshot%202023-09-17%20152449.png)
+
+- Check the status of the replicaset.
+
+```
+kubectl get replicaset
+```
+
+![Image 25](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/3b3992f628e312dba3f2e322196b1700158cbeed/Images/Screenshot%202023-09-17%20152841.png)
+
+- *Scaling the replicaset using the command line*. Here we will be increasing the number of replicas from 6 to 9. Here we will be specifying the number of replicas followed by the name of the yaml file.
+
+```
+kubectl scale --replicas=9 -f replicaset-definition-v2.yaml
+```
+
+![Image 26](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/3b3992f628e312dba3f2e322196b1700158cbeed/Images/Screenshot%202023-09-17%20153032.png)
+
+- Check the status of the replicaset.
+
+```
+kubectl get replicaset
+```
+
+![Image 27](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/3b3992f628e312dba3f2e322196b1700158cbeed/Images/Screenshot%202023-09-17%20153053.png)
+
+- *Scaling the replicaset using the command line*. Here we will be increasing the number of replicas from 9 to 12. Here we will be specifying the number of replicas followed by the type of the object and the name of the object.
+
+```
+kubectl scale replicas=12 replicaset myapp-replicaset
+```
+
+![Image 28](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/3b3992f628e312dba3f2e322196b1700158cbeed/Images/Screenshot%202023-09-17%20190023.png)
+
+- Check the status of the replicaset.
+
+```
+kubectl get replicaset
+```
+
+![Image 29](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/bf65c89e3098065980a960143f31e86aa664c29f/Images/Screenshot%202023-09-17%20190357.png)
