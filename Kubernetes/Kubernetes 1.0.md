@@ -473,6 +473,8 @@ kubectl get replicaset
 kubectl scale replicas=12 replicaset myapp-replicaset
 ```
 
+Note: Here the "ReplicaSet" is the type of the object and "myapp-replicaset" is the name of the object.
+
 ![Image 28](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/3b3992f628e312dba3f2e322196b1700158cbeed/Images/Screenshot%202023-09-17%20190023.png)
 
 - Check the status of the replicaset.
@@ -483,5 +485,130 @@ kubectl get replicaset
 
 ![Image 29](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/bf65c89e3098065980a960143f31e86aa664c29f/Images/Screenshot%202023-09-17%20190357.png)
 
+<<<<<<< Updated upstream
 
 **This is a test Line**
+=======
+**Creating a Deployment**
+
+A deployment is a higher level concept that is used to manage the pods and the replicaset. A deployment is used to make sure that the specified number of pods are running at all times. If the load on the pods increase and the user wants to scale the application, then the user can increase the number of pods on the node, but if the demand further increases and the user wants to scale the application further, then the user can add more nodes to the cluster and then add more pods to the cluster. This is where the deployment comes into play, it is used to make sure that the specified number of pods are running at all times.
+
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp-deployment
+  labels:
+    app: myapp
+    type: front-end
+spec:
+  template:
+    metadata:
+      name: myapp-pod
+      labels:
+        app: myapp
+        type: front-end
+    spec:
+      containers:
+        - name: nginx-container
+          image: nginx
+  replicas: 3
+  selector:
+    matchLabels:
+      type: front-end
+```
+
+- To create the deployment using the YAML file.
+
+```
+kubectl create -f deployment.yaml
+```
+
+![Image 30](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/6fba19b05920b9e60ff815fa3b641689e9a46c35/Images/Screenshot%202023-09-17%20224007.png)
+
+- To check the status of the deployment.
+
+```
+kubectl get deployment
+```
+
+![Image 31](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/6fba19b05920b9e60ff815fa3b641689e9a46c35/Images/Screenshot%202023-09-17%20224100.png)
+
+- To check the status of the replicaset.
+
+```
+kubectl get replicaset
+```
+
+![Image 32](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/6fba19b05920b9e60ff815fa3b641689e9a46c35/Images/Screenshot%202023-09-17%20224150.png)
+
+- To check the status of the pods.
+
+```
+kubectl get pods
+```
+
+![Image 33](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/6fba19b05920b9e60ff815fa3b641689e9a46c35/Images/Screenshot%202023-09-17%20224248.png)
+
+- To check the status of the deployment in detail.
+
+```
+kubectl get all
+```
+
+![Image 34](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/6fba19b05920b9e60ff815fa3b641689e9a46c35/Images/Screenshot%202023-09-17%20224346.png)
+
+**Updates and Rollbacks in a Deployment**
+
+
+**Deployment Strategies**
+
+There are two types of deployment strategies:
+
+- *Recreate*: In this strategy the deployment will first terminate all the existing pods and then create new pods with the updated configuration. Under this strategy the application will suffer a downtime as the application will be unavailable during the time when the pods are being terminated and the new pods are being created.
+
+- *Rolling Update*: In this strategy the deployment will first create new pods with the updated configuration and then terminate the old pods. This is the recommended strategy that is used by the kubernetes. Under this strategy the application will not suffer a downtime as the application will be available during the time when the pods are being terminated and the new pods are being created.
+
+Note: The default deployment strategy is rolling update, so if you don't specify the deployment strategy in the deployment yaml file then the rolling update strategy will be used by default.
+
+**Updating the Deployment**
+
+- *To update the deployment using the existing yaml file*, Here we will be updating the nginx image from nginx to nginx:1.7.1. Here we will be using kubectl apply command to apply the changes to the deployment.
+
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp-deployment
+  labels:
+    app: myapp
+    type: front-end
+spec:
+  template:
+    metadata:
+      name: myapp-pod
+      labels:
+        app: myapp
+        type: front-end
+    spec:
+      containers:
+        - name: nginx-container
+          image: nginx:1.7.1
+  replicas: 3
+  selector:
+    matchLabels:
+      type: front-end
+```
+
+```
+kubectl apply -f deployment-definition.yaml
+```
+
+![Image 35]()
+
+You can do this using command line using command 
+```
+kubectl set image deployment/myapp-deployment \
+nginx-container=nginx:1.7.1"
+```
+>>>>>>> Stashed changes
