@@ -608,5 +608,3 @@ kubectl set image deployment/myapp-deployment \
 nginx-container=nginx:1.7.1"
 ```
 but this requires you to to change the configuration of the deployment file.
-
-
