@@ -600,7 +600,7 @@ spec:
 kubectl apply -f deployment-definition.yaml
 ```
 
-![Image 35]()
+![Image 35](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/3b0da3fa6d9c3b5adf9e45ac3304e2e52f6a27cf/Images/Screenshot%202023-09-17%20233521.png)
 
 You can do this using command line using command,
 ```
