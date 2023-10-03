@@ -485,10 +485,6 @@ kubectl get replicaset
 
 ![Image 29](https://github.com/cloud-devops-enthusiast/DevOpsRoadmap2023/blob/bf65c89e3098065980a960143f31e86aa664c29f/Images/Screenshot%202023-09-17%20190357.png)
 
-<<<<<<< Updated upstream
-
-**This is a test Line**
-=======
 **Creating a Deployment**
 
 A deployment is a higher level concept that is used to manage the pods and the replicaset. A deployment is used to make sure that the specified number of pods are running at all times. If the load on the pods increase and the user wants to scale the application, then the user can increase the number of pods on the node, but if the demand further increases and the user wants to scale the application further, then the user can add more nodes to the cluster and then add more pods to the cluster. This is where the deployment comes into play, it is used to make sure that the specified number of pods are running at all times.
@@ -606,9 +602,11 @@ kubectl apply -f deployment-definition.yaml
 
 ![Image 35]()
 
-You can do this using command line using command 
+You can do this using command line using command,
 ```
 kubectl set image deployment/myapp-deployment \
 nginx-container=nginx:1.7.1"
 ```
->>>>>>> Stashed changes
+but this requires you to to change the configuration of the deployment file.
+
+
